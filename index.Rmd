@@ -11,6 +11,25 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(ggplot2)
+library(stringr)
+library(scales)
+library(dplyr)
+library(tidyr)
+library(DT)
+library(png)
+library(data.table)
+library(magrittr)
+library(gridExtra)
+library(openxlsx)
+library(patchwork)
+library(ggthemes)
+library(plotly)
+library(ggridges)
+library(forecast)
+library(GGally)
+library(cluster)
+library(sf)
 ```
 
 
