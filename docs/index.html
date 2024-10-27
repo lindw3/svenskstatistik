@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta name="author" content="William Lind" />
 
 
 
@@ -24,7 +25,7 @@ window.FlexDashboardComponents = [];
 <script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -38,9 +39,9 @@ window.FlexDashboardComponents = [];
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
-<link href="site_libs/value-box-accent-static-0.6.2/theme-cosmo-value-box.css" rel="stylesheet" />
+<link href="site_libs/value-box-accent-static-0.6.2/theme-journal-value-box.css" rel="stylesheet" />
 <link href="site_libs/flexdashboard-css-0.6.2/flexdashboard.min.css" rel="stylesheet" />
-<link href="site_libs/flexdashboard-css-0.6.2/theme-cosmo.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/theme-journal.css" rel="stylesheet" />
 <style type="text/css">
 /*
   CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
@@ -141,6 +142,7 @@ html, body {
 </style>
 
 
+<link rel="stylesheet" href="styles.css" type="text/css" />
 
 </head>
 
@@ -156,7 +158,8 @@ html, body {
 <span class="navbar-brand">
   Svensk statistik
   <span class="navbar-author">
-        </span>
+    William Lind
+    </span>
 </span>
 
 <button id="navbar-button" type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
@@ -1856,27 +1859,50 @@ window.FlexDashboardComponents.push({
 
 <div id="dashboard-container">
 
-<div id="column" class="section level2" data-width="650">
-<h2>Column</h2>
-<div id="test" class="section level3">
-<h3>Test</h3>
+<div id="section" class="section level1">
+<h1></h1>
+<div id="section-1" class="section level2" data-height="200">
+<h2></h2>
+<div id="om-initiativet" class="section level3">
+<h3>Om initiativet</h3>
+<p><em>Svensk statistik</em> är ett initiativ taget av William Lind med
+det huvudsakliga syftet att på ett pedagogiskt sätt visualisera
+utvecklingen i Sverige utifrån ett antal parametrar. Genom SCB är
+Sverige ett land som ligger i framkant i att lagra registerdata och föra
+annan statistik på befolkningsnivå, men denna statistik är inte alltid
+så enkel att ta till sig.</p>
+</div>
+</div>
+<div id="section-2" class="section level2" data-height="400">
+<h2></h2>
+<div id="områden" class="section level3">
+<h3>Områden</h3>
+<p>Dessa områden finns i nuläget rapporter att fördjupa sig inom: <br>
+<br> * <strong>Demokrati</strong>: Partisympatier, valresultat och
+valdeltagande. <br> * <strong>Arbete</strong>: Arbetsmiljö, arbetstid
+sysselsättningsgrad och frånvaro. <br> * <strong>Utbildning</strong>:
+Utbildningsnivåer. <br> <br> För att komma åt rapporten, <strong>klicka
+på bilden!</strong></p>
+</div>
+</div>
+<div id="section-3" class="section level2" data-height="350">
+<h2></h2>
+<div id="demokrati" class="section level3">
+<h3>Demokrati</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
+<a href="https://lindw3.github.io/svenskstatistik/">
+  <img src="Test.png" width="400px" style="display: block; margin-left: auto; margin-right: auto;"/>
+</a>
 </div>
+<div id="arbete" class="section level3">
+<h3>Arbete</h3>
+<p>SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?</p>
 </div>
-<div id="column-1" class="section level2" data-width="350">
-<h2>Column</h2>
-<div id="chart-b" class="section level3">
-<h3>Chart B</h3>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-</div>
-<div id="chart-c" class="section level3">
-<h3>Chart C</h3>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
+<div id="utbildning" class="section level3">
+<h3>Utbildning</h3>
+<p>SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?</p>
 </div>
 </div>
 </div>
@@ -1901,7 +1927,7 @@ $(document).ready(function() {
 $(document).ready(function () {
   FlexDashboard.init({
     fillPage: true,
-    orientation: "columns",
+    orientation: "rows",
     storyboard: false,
     defaultFigWidth: 576,
     defaultFigHeight: 460,

@@ -1,36 +1,55 @@
 ---
 title: "Svensk statistik"
+author: "William Lind"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
+    theme: journal
+    css: styles.css
 ---
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
 ```
 
-Column {data-width=650}
------------------------------------------------------------------------
+#
 
-### Test
+## {data-height=200}
 
-```{r}
+### Om initiativet
+*Svensk statistik* är ett initiativ taget av William Lind med det huvudsakliga syftet att på ett pedagogiskt sätt visualisera utvecklingen i Sverige utifrån ett antal parametrar. Genom SCB är Sverige ett land som ligger i framkant i att lagra registerdata och föra annan statistik på befolkningsnivå, men denna statistik är inte alltid så enkel att ta till sig.
 
+
+## {data-height=400}
+
+### Områden
+Dessa områden finns i nuläget rapporter att fördjupa sig inom:
+<br>
+<br>
+* **Demokrati**: Partisympatier, valresultat och valdeltagande.
+<br>
+* **Arbete**: Arbetsmiljö, arbetstid sysselsättningsgrad och frånvaro.
+<br>
+* **Utbildning**: Utbildningsnivåer.
+<br>
+<br>
+För att komma åt rapporten, **klicka på bilden!**
+
+## {data-height=350}
+### Demokrati
+```{r, echo=FALSE}
+library(htmltools)
+
+img_html <- tags$a(href = "https://lindw3.github.io/svenskstatistik/", 
+                   tags$img(src = "C:\\Users\\WILIDF17\\OneDrive - Sveriges Riksidrottsförbund\\Dokument\\GitHub\\svenskstatistik\\Test.png", 
+                            width = "400px", style = "display: block; margin-left: auto; margin-right: auto;"))
+
+HTML(as.character(img_html))
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
+### Arbete
+SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?
 
-### Chart B
-
-```{r}
-
-```
-
-### Chart C
-
-```{r}
-
-```
-
+### Utbildning
+SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?
