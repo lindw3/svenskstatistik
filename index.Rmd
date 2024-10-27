@@ -13,7 +13,6 @@ output:
 library(flexdashboard)
 ```
 
-#
 
 ## {data-height=200}
 
