@@ -1,6 +1,6 @@
 ---
 title: "Svensk statistik"
-author: "William Lind"
+author: "av William Lind"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
@@ -36,7 +36,7 @@ library(sf)
 ## {data-height=200}
 
 ### Om initiativet
-*Svensk statistik* är ett initiativ taget av William Lind med det huvudsakliga syftet att på ett pedagogiskt sätt visualisera utvecklingen i Sverige utifrån ett antal parametrar. Genom SCB är Sverige ett land som ligger i framkant i att lagra registerdata och föra annan statistik på befolkningsnivå, men denna statistik är inte alltid så enkel att ta till sig.
+*Svensk statistik* är ett initiativ taget av William Lind med det huvudsakliga syftet att visualisera utvecklingen i Sverige utifrån ett antal parametrar. Genom SCB är Sverige ett land som ligger i framkant i att lagra registerdata och föra annan statistik på befolkningsnivå, men denna statistik är inte alltid så enkel att ta till sig. Detta är ett försök att förenkla möjligheten att ta till sig av denna data.
 
 
 ## {data-height=400}
