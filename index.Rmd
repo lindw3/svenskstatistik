@@ -67,7 +67,12 @@ HTML(as.character(img_html))
 ```
 
 ### Arbete
-SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?
+
+<div style="text-align: center;">
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" target="_blank" class="btn btn-primary" role="button">DEMOKRATI</a>
+</div>
+
+
 
 ### Utbildning
 SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?
