@@ -59,7 +59,7 @@ För att komma åt rapporten, **klicka på bilden!**
 ```{r, echo=FALSE}
 library(htmltools)
 
-img_html <- tags$a(href = "https://lindw3.github.io/svenskstatistik/", 
+img_html <- tags$a(href = "https://lindw3.github.io/svenskstatistik-demokrati/", 
                    tags$img(src = "C:\\Users\\WILIDF17\\OneDrive - Sveriges Riksidrottsförbund\\Dokument\\GitHub\\svenskstatistik\\Test.png", 
                             width = "400px", style = "display: block; margin-left: auto; margin-right: auto;"))
 
