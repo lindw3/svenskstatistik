@@ -33,6 +33,7 @@ library(sf)
 ```
 
 
+
 ## {data-height=200}
 
 ### Om initiativet
@@ -52,27 +53,20 @@ Dessa områden finns i nuläget rapporter att fördjupa sig inom:
 * **Utbildning**: Utbildningsnivåer.
 <br>
 <br>
-För att komma åt rapporten, **klicka på bilden!**
+För att komma åt en rapport, **klicka nedan!**
 
-## {data-height=350}
-### Demokrati
-```{r, echo=FALSE}
-library(htmltools)
+##
+### Rapporter
+<style>
+  .big-button {
+    font-size: 30px;
+    padding: 20px 40px;
+  }
+</style>
 
-img_html <- tags$a(href = "https://lindw3.github.io/svenskstatistik-demokrati/", 
-                   tags$img(src = "C:\\Users\\WILIDF17\\OneDrive - Sveriges Riksidrottsförbund\\Dokument\\GitHub\\svenskstatistik\\Test.png", 
-                            width = "400px", style = "display: block; margin-left: auto; margin-right: auto;"))
 
-HTML(as.character(img_html))
-```
-
-### Arbete
-
-<div style="text-align: center;">
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" target="_blank" class="btn btn-primary" role="button">DEMOKRATI</a>
+<div style="display: flex; gap: 10px; justify-content: left;">
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" class="btn btn-primary big-button" role="button">DEMOKRATI</a>
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" class="btn btn-primary big-button" role="button">ARBETE</a>
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" class="btn btn-primary big-button" role="button">UTBILDNING</a>
 </div>
-
-
-
-### Utbildning
-SCREENSHOT FRÅN RAPPORTEN MED LÄNK NÄR MAN KLICKAR PÅ BILDEN?
