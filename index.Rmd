@@ -9,6 +9,7 @@ output:
     css: styles.css
 ---
 
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(ggplot2)
@@ -46,11 +47,11 @@ library(sf)
 Dessa områden finns i nuläget rapporter att fördjupa sig inom:
 <br>
 <br>
-* **Demokrati**: Partisympatier, valresultat och valdeltagande.
+- **Demokrati**: Partisympatier, valresultat och valdeltagande.
 <br>
-* **Arbete**: Arbetsmiljö, arbetstid sysselsättningsgrad och frånvaro.
+- **Arbete**: Arbetsmiljö, arbetstid sysselsättningsgrad och frånvaro.
 <br>
-* **Utbildning**: Utbildningsnivåer.
+- **Utbildning**: Utbildningsnivåer.
 <br>
 <br>
 För att komma åt en rapport, **klicka nedan!**
