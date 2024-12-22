@@ -58,16 +58,14 @@ För att komma åt en rapport, **klicka nedan!**
 
 ##
 ### Rapporter
-<style>
-  .big-button {
-    font-size: 30px;
-    padding: 20px 40px;
-  }
-</style>
-
-
-<div style="display: flex; gap: 15px; justify-content: left;">
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" class="btn btn-primary big-button" role="button">DEMOKRATI</a>
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" class="btn btn-primary big-button" role="button">ARBETE</a>
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" class="btn btn-primary big-button" role="button">UTBILDNING</a>
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" target="_blank">
+    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/demokrati.png" width="30%">
+  </a>
+  <a href="https://lindw3.github.io/svenskstatistik-arbete/" target="_blank">
+    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/arbete.png" width="30%">
+  </a>
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" target="_blank">
+    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/utbildning.png" width="30%">
+  </a>
 </div>
