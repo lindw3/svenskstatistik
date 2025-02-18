@@ -35,13 +35,13 @@ library(sf)
 
 
 
-## {data-height=200}
+## {data-height=200 .tabset .tabset-pills}
 
 ### Om initiativet
 *Svensk statistik* är ett initiativ med det huvudsakliga syftet att visualisera utvecklingen i Sverige utifrån ett antal parametrar. Genom SCB är Sverige ett land som ligger i framkant i att lagra registerdata och föra annan statistik på befolkningsnivå, men denna statistik är inte alltid så enkel att ta till sig. Detta är ett försök att förenkla möjligheten att ta till sig av denna data.
 
 
-## {data-height=400}
+## {data-height=400 .tabset .tabset-pills}
 
 ### Områden
 Dessa områden finns i nuläget rapporter att fördjupa sig inom:
@@ -56,16 +56,16 @@ Dessa områden finns i nuläget rapporter att fördjupa sig inom:
 <br>
 För att komma åt en rapport, **klicka nedan!**
 
-##
+## {.tabset .tabset-pills}
 ### Rapporter
 <div style="display: flex; justify-content: space-between; gap: 10px;">
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" target="_blank">
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/">
     <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/demokrati.png" width="30%">
   </a>
-  <a href="https://lindw3.github.io/svenskstatistik-arbete/" target="_blank">
+  <a href="https://lindw3.github.io/svenskstatistik-arbete/">
     <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/arbete.png" width="30%">
   </a>
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/" target="_blank">
+  <a href="https://lindw3.github.io/svenskstatistik-demokrati/">
     <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/utbildning.png" width="30%">
   </a>
 </div>
