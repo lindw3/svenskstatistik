@@ -51,7 +51,7 @@ Dessa områden finns i nuläget rapporter att fördjupa sig inom:
 <br>
 - **Arbete**: Arbetsmiljö, arbetstid sysselsättningsgrad och frånvaro.
 <br>
-- **Utbildning**: Utbildningsnivåer.
+- **Livsstil**: Välbefinnande, trygghet, sociala relationer och hälsovanor.
 <br>
 <br>
 För att komma åt en rapport, **klicka nedan!**
@@ -66,6 +66,6 @@ För att komma åt en rapport, **klicka nedan!**
     <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/arbete.png" width="30%">
   </a>
   <a href="https://lindw3.github.io/svenskstatistik-demokrati/">
-    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/utbildning.png" width="30%">
+    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/livsstil.png" width="30%">
   </a>
 </div>
