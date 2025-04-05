@@ -49,9 +49,9 @@ Dessa områden finns i nuläget rapporter att fördjupa sig inom:
 <br>
 - **Demokrati**: Partisympatier, valresultat och valdeltagande.
 <br>
-- **Arbete**: Arbetsmiljö, arbetstid sysselsättningsgrad och frånvaro.
+- **Arbete**: Arbetsmiljö, arbetstid, sysselsättningsgrad och frånvaro från arbete.
 <br>
-- **Livsstil**: Välbefinnande, trygghet, sociala relationer och hälsovanor.
+- **Livsstil**: Välbefinnande, hälsa, rökning/snusning och trygghet, .
 <br>
 <br>
 För att komma åt en rapport, **klicka nedan!**
@@ -65,7 +65,7 @@ För att komma åt en rapport, **klicka nedan!**
   <a href="https://lindw3.github.io/svenskstatistik-arbete/">
     <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/arbete.png" width="30%">
   </a>
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/">
+  <a href="https://lindw3.github.io/svenskstatistik-livsstil/">
     <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/livsstil.png" width="30%">
   </a>
 </div>
