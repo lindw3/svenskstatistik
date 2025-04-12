@@ -56,16 +56,27 @@ Dessa områden finns i nuläget rapporter att fördjupa sig inom:
 <br>
 För att komma åt en rapport, **klicka nedan!**
 
-## {.tabset .tabset-pills}
-### Rapporter
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-  <a href="https://lindw3.github.io/svenskstatistik-demokrati/">
-    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/demokrati.png" width="30%">
-  </a>
-  <a href="https://lindw3.github.io/svenskstatistik-arbete/">
-    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/arbete.png" width="30%">
-  </a>
-  <a href="https://lindw3.github.io/svenskstatistik-livsstil/">
-    <img src="C:/Users/WILIDF17/OneDrive - Sveriges Riksidrottsförbund/Dokument/GitHub/svenskstatistik/bilder/livsstil.png" width="30%">
-  </a>
-</div>
+##
+###
+
+<a href="https://lindw3.github.io/svenskstatistik-demokrati/">
+```{r, echo=FALSE, out.width = "100%", out.height = "100%"}
+knitr::include_graphics('bilder/demokrati.png')
+```
+</a>
+
+###
+
+<a href="https://lindw3.github.io/svenskstatistik-arbete/">
+```{r, echo=FALSE, out.width = "100%", out.height = "100%"}
+knitr::include_graphics('bilder/arbete.png')
+```
+</a>
+
+###
+
+<a href="https://lindw3.github.io/svenskstatistik-livsstil/">
+```{r, echo=FALSE, out.width = "100%", out.height = "100%"}
+knitr::include_graphics('bilder/livsstil.png')
+```
+</a>
