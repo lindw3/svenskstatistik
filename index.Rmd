@@ -59,7 +59,7 @@ För att komma åt en rapport, **klicka nedan!**
 ## {data-height=375}
 ###
 
-<a href="test.html">
+<a href="https://lindw3.github.io/svenskstatistik-demokrati/">
 ```{r, echo=FALSE, out.width = "100%", out.height = "100%"}
 
 knitr::include_graphics('bilder/demokrati.png')
