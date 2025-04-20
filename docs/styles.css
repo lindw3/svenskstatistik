@@ -1,3 +1,11 @@
 body {
   color: black;
 }
+
+
+img:hover {
+   filter: brightness(1.2);
+   transform: scale(1.02);
+   transition: transform 0.3s, filter 0.3s;
+  }
+  

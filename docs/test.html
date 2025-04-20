@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="author" content="av William Lind" />
+
+
+
+<title>Svensk statistik - arbete</title>
+
+<meta property="og:title" content="Svensk statistik - arbete" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link rel="icon" href="data:image/x-icon;" type="image/x-icon">
+
+
+<script type="text/javascript">
+window.FlexDashboardComponents = [];
+</script>
+
+<script id="flexdashboard-navbar" type="application/json">
+[{"title":"Till startsidan","href":"https://lindw3.github.io/svenskstatistik/","align":"right"}]
+</script>
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<link href="site_libs/value-box-accent-static-0.6.2/theme-journal-value-box.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/flexdashboard.min.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/theme-journal.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<style type="text/css">
+/*
+  CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
+  applied _before_ flexdashboard.js initializes, which is why this CSS has been pulled
+  out from flexdashboard.scss and inlined in the document's head.
+*/
+
+.storyboard-nav button {
+  background: transparent;
+  border: 0;
+  opacity: .3;
+  outline: none;
+  padding: 0;
+}
+
+.storyboard-nav button:hover,
+.storyboard-nav button:hover {
+  opacity: .5;
+}
+
+.storyboard-nav button:disabled,
+.storyboard-nav button:disabled {
+  opacity: .1;
+}
+
+.storyboard-nav .sbnext,
+.storyboard-nav .sbprev {
+  float: left;
+  width: 2%;
+  height: 120px;
+}
+
+.storyboard-nav .sbprev {
+  text-align: left;
+  width: 2%;
+}
+
+.storyboard-nav .sbnext {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.storyboard-nav .sbframelist {
+  margin: 0 auto;
+  width: 94%;
+  height: 120px;
+  overflow: hidden;
+  text-shadow: none;
+  margin-bottom: 8px;
+}
+
+.storyboard-nav .sbframelist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.storyboard-nav .sbframelist ul li {
+  float: left;
+  width: 270px;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.storyboard-nav .sbframelist ul li:last-child {
+  margin-right: 0px;
+}
+
+.sbframe-commentary {
+  width: 300px;
+}
+
+.sbframe-commentary ul {
+  padding-left: 22px;
+}
+
+.sbframe.active {
+  display: flex;
+}
+
+.sbframe:not(.active) {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+html, body {
+  height: 100%;
+}
+
+#dashboard-container {
+  height: 100%;
+}
+}
+</style>
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<span class="navbar-logo pull-left">
+  
+</span>
+<span class="navbar-brand">
+  Svensk statistik - arbete
+  <span class="navbar-author">
+    av William Lind
+    </span>
+</span>
+
+<button id="navbar-button" type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+</ul>
+<ul class="nav navbar-nav navbar-right">
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.navbar-->
+
+<script type="text/javascript">
+
+
+var FlexDashboard = (function () {
+
+  // initialize options
+  var _options = {};
+
+  var FlexDashboard = function() {
+
+    // default options
+    _options = $.extend(_options, {
+      theme: "cosmo",
+      fillPage: false,
+      orientation: 'columns',
+      storyboard: false,
+      defaultFigWidth: 576,
+      defaultFigHeight: 461,
+      defaultFigWidthMobile: 360,
+      defaultFigHeightMobile: 461,
+      isMobile: false,
+      isPortrait: false,
+      resize_reload: true
+    });
+  };
+
+  function init(options) {
+
+    // extend default options
+    $.extend(true, _options, options);
+
+    // add ids to sections that don't have them (pandoc won't assign ids
+    // to e.g. sections with titles consisting of only chinese characters)
+    var nextId = 1;
+    $('.level1:not([id]),.level2:not([id]),.level3:not([id])').each(function() {
+      $(this).attr('id', 'dashboard-' + nextId++);
+    });
+
+    // find navbar items
+    var navbarItems = $('#flexdashboard-navbar');
+    if (navbarItems.length)
+      navbarItems = JSON.parse(navbarItems.html());
+    addNavbarItems(navbarItems);
+
+    // find the main dashboard container
+    var dashboardContainer = $('#dashboard-container');
+
+    // resolve mobile classes
+    resolveMobileClasses(dashboardContainer);
+
+    // one time global initialization for components
+    componentsInit(dashboardContainer);
+
+    // look for a global sidebar
+    var globalSidebar = dashboardContainer.find(".section.level1.sidebar");
+    if (globalSidebar.length > 0) {
+
+      // global layout for fullscreen displays
+      if (!isMobilePhone()) {
+
+         // hoist it up to the top level
+         globalSidebar.insertBefore(dashboardContainer);
+
+         // lay it out (set width/positions)
+         layoutSidebar(globalSidebar, dashboardContainer);
+
+      // tuck sidebar into first page for mobile phones
+      } else {
+
+        // convert it into a level3 section
+        globalSidebar.removeClass('sidebar');
+        globalSidebar.removeClass('level1');
+        globalSidebar.addClass('level3');
+        var h1 = globalSidebar.children('h1');
+        var h3 = $('<h3></h3>');
+        h3.append(h1.contents());
+        h3.insertBefore(h1);
+        h1.detach();
+
+        // move it into the first page
+        var page = dashboardContainer.find('.section.level1').first();
+        if (page.length > 0)
+          page.prepend(globalSidebar);
+      }
+    }
+
+    // look for pages to layout
+    var pages = $('div.section.level1');
+    if (pages.length > 0) {
+
+        // find the navbar and collapse on clicked
+        var navbar = $('#navbar');
+        navbar.on("click", "a[data-toggle!=dropdown]", null, function () {
+           navbar.collapse('hide');
+        });
+
+        // envelop the dashboard container in a tab content div
+        dashboardContainer.wrapInner('<div class="tab-content"></div>');
+
+        pages.each(function(index) {
+
+          // lay it out
+          layoutDashboardPage($(this));
+
+          // add it to the navbar
+          addToNavbar($(this), index === 0);
+
+        });
+
+    } else {
+
+      // remove the navbar and navbar button if we don't
+      // have any navbuttons
+      if (navbarItems.length === 0) {
+        $('#navbar').remove();
+        $('#navbar-button').remove();
+      }
+
+      // add the storyboard class if requested
+      if (_options.storyboard)
+        dashboardContainer.addClass('storyboard');
+
+      // layout the entire page
+      layoutDashboardPage(dashboardContainer);
+    }
+
+    // if we are in shiny we need to trigger a window resize event to
+    // force correct layout of shiny-bound-output elements
+    if (isShinyDoc())
+      $(window).trigger('resize');
+
+    // make main components visible
+    $('.section.sidebar').css('visibility', 'visible');
+    dashboardContainer.css('visibility', 'visible');
+
+    // handle location hash
+    handleLocationHash();
+
+    // intialize prism highlighting
+    initPrismHighlighting();
+
+    // record mobile and orientation state then register a handler
+    // to refresh if resize_reload is set to true and it changes
+    _options.isMobile = isMobilePhone();
+    _options.isPortrait = isPortrait();
+    if (_options.resize_reload) {
+      $(window).on('resize', function() {
+        if (_options.isMobile !== isMobilePhone() ||
+            _options.isPortrait !== isPortrait()) {
+          window.location.reload();
+        }
+      });
+    } else {
+      // if in desktop mode and resizing to mobile, make sure the heights are 100%
+      // This enforces what `fillpage.css` does for "wider" pages.
+      // Since we are not reloading once the page becomes small, we need to force the height to 100%
+      // This is a new situation introduced when `_options.resize_reload` is `false`
+      if (! _options.isMobile) {
+        // only add if `fillpage.css` was added in the first place
+        if (_options.fillPage) {
+          // fillpage.css
+          $("html,body,#dashboard").css("height", "100%");
+        }
+      }
+    }
+    // trigger layoutcomplete event
+    dashboardContainer.trigger('flexdashboard:layoutcomplete');
+  }
+
+  function resolveMobileClasses(dashboardContainer) {
+     // add top level layout class
+    dashboardContainer.addClass(isMobilePhone() ? 'mobile-layout' :
+                                                  'desktop-layout');
+
+    // look for .mobile sections and add .no-mobile to their peers
+    var mobileSections = $('.section.mobile');
+    mobileSections.each(function() {
+       var id = $(this).attr('id');
+       var nomobileId = id.replace(/-\d+$/, '');
+       $('#' + nomobileId).addClass('no-mobile');
+    });
+  }
+
+  function addNavbarItems(navbarItems) {
+
+    var navbarLeft = $('ul.navbar-left');
+    var navbarRight = $('ul.navbar-right');
+
+    for (var i = 0; i<navbarItems.length; i++) {
+
+      // get the item
+      var item = navbarItems[i];
+
+      // determine the container
+      var container = null;
+      if (item.align === "left")
+        container = navbarLeft;
+      else
+        container = navbarRight;
+
+      // navbar menu if we have multiple items
+      if (item.items) {
+        var menu = navbarMenu(null, item.icon, item.title, container);
+        for (var j = 0; j<item.items.length; j++) {
+          var subItem = item.items[j];
+          var li = $('<li></li>');
+          var a = navbarLink(subItem.icon, subItem.title, subItem.href, subItem.target);
+          a.removeClass("nav-link").addClass("dropdown-item");
+          li.append(a);
+          menu.append(li);
+        }
+      } else {
+        var li = $('<li class="nav-item"></li>');
+        li.append(navbarLink(item.icon, item.title, item.href, item.target));
+        container.append(li);
+      }
+    }
+  }
+
+  // create or get a reference to an existing dropdown menu
+  function navbarMenu(id, icon, title, container) {
+    var existingMenu = [];
+    if (id)
+      existingMenu = container.children('#' + id);
+    if (existingMenu.length > 0) {
+      return existingMenu.children('ul');
+    } else {
+      var li = $('<li class="nav-item"></li>');
+      if (id)
+        li.attr('id', id);
+      li.addClass('dropdown');
+      // auto add "Share" title on mobile if necessary
+      if (!title && icon && (icon === "fa-share-alt") && isMobilePhone())
+        title = "Share";
+      if (title) {
+        title = title + ' <span class="caret"></span>';
+      }
+      var a = navbarLink(icon, title, "#");
+      a.addClass('dropdown-toggle');
+      a.attr('data-toggle', 'dropdown');
+      a.attr('data-bs-toggle', 'dropdown');
+      a.attr('role', 'button');
+      a.attr('aria-expanded', 'false');
+      li.append(a);
+      var ul = $('<ul class="dropdown-menu"></ul>');
+      ul.attr('role', 'menu');
+      li.append(ul);
+      container.append(li);
+      return ul;
+    }
+  }
+
+  function addToNavbar(page, active) {
+
+    // capture the id and data-icon attribute (if any)
+    var id = page.attr('id');
+    var icon = page.attr('data-icon');
+    var navmenu = page.attr('data-navmenu');
+    var navmenuIcon = page.attr('data-navmenu-icon');
+
+    // get hidden state (transfer this to navbar)
+    var hidden = page.hasClass('hidden');
+    page.removeClass('hidden');
+
+    // sanitize the id for use with bootstrap tabs
+    id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+    page.attr('id', id);
+
+    // get the wrapper
+    var wrapper = page.closest('.dashboard-page-wrapper');
+
+    // move the id to the wrapper
+    page.removeAttr('id');
+    wrapper.attr('id', id);
+
+    // add the tab-pane class to the wrapper
+    wrapper.addClass('tab-pane');
+
+    // get a reference to the h1, discover its inner contens, then detach it
+    var h1 = wrapper.find('h1').first();
+    var title = h1.contents();
+    h1.detach();
+
+    // create a navbar item
+    var li = $('<li></li>');
+    var a = navbarLink(icon, title, '#' + id);
+    a.attr('data-toggle', 'tab');
+    a.attr('data-bs-toggle', 'tab');
+    li.append(a);
+
+    // add it to the navbar (or navbar menu if specified)
+    var container = $('ul.navbar-left');
+    if (navmenu) {
+      var menuId = navmenu.replace(/\s+/g, '');
+      var menu = navbarMenu(menuId, navmenuIcon, navmenu, container);
+      li.find("> a").removeClass("nav-link").addClass("dropdown-item");
+      menu.append(li);
+    } else {
+      li.addClass("nav-item")
+      container.append(li);
+    }
+
+    // mark active tab and corresponding nav menu item
+    if (active)
+      $(a).tab("show");
+
+    // hide it if requested
+    if (hidden)
+      li.addClass('hidden');
+  }
+
+  function navbarLink(icon, title, href, target) {
+
+    var a = $('<a class="nav-link"></a>');
+    if (icon) {
+
+      // get the name of the icon set and icon
+      var dashPos = icon.indexOf("-");
+      var iconSet = null;
+      var iconSplit = icon.split(" ");
+      if (iconSplit.length > 1) {
+        iconSet = iconSplit[0];
+        icon = iconSplit.slice(1).join(" ");
+      } else {
+        iconSet = icon.substring(0, dashPos);
+      }
+      var iconName = icon.substring(dashPos + 1);
+
+      // create the icon
+      var iconElement = $('<span class="' + iconSet + ' ' + icon + '"></span>');
+      if (title)
+        iconElement.css('margin-right', '7px');
+      a.append(iconElement);
+      // if href is null see if we can auto-generate based on icon (e.g. social)
+      if (!href)
+        maybeGenerateLinkFromIcon(iconName, a);
+    }
+    if (title)
+      a.append(title);
+
+    // add the href.
+    if (href) {
+      if (href === "source_embed") {
+        a.attr('href', '#');
+        a.attr('data-featherlight', "#flexdashboard-source-code");
+        a.featherlight({
+            beforeOpen: function(event){
+              $('body').addClass('unselectable');
+            },
+            afterClose: function(event){
+              $('body').removeClass('unselectable');
+            }
+        });
+      } else {
+        a.attr('href', href);
+      }
+    }
+
+    // add the arget
+    if (target)
+      a.attr('target', target);
+
+    return a;
+  }
+
+  // auto generate a link from an icon name (e.g. twitter) when possible
+  function maybeGenerateLinkFromIcon(iconName, a) {
+
+     var serviceLinks = {
+      "twitter": "https://twitter.com/share?text=" + encodeURIComponent(document.title) + "&url="+encodeURIComponent(location.href),
+      "facebook": "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href),
+      "linkedin": "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title),
+      "pinterest": "https://pinterest.com/pin/create/link/?url="+encodeURIComponent(location.href) + "&description=" + encodeURIComponent(document.title)
+    };
+
+    var makeSocialLink = function(a, href) {
+      a.attr('href', '#');
+      a.on('click', function(e) {
+        e.preventDefault();
+        window.open(href);
+      });
+    };
+
+    $.each(serviceLinks, function(key, value) {
+      if (iconName.indexOf(key) !== -1)
+        makeSocialLink(a, value);
+    });
+  }
+
+  // layout a dashboard page
+  function layoutDashboardPage(page) {
+
+    // use a page wrapper so that free form content above the
+    // dashboard appears at the top rather than the side (as it
+    // would without the wrapper in a column orientation)
+    var wrapper = $('<div class="dashboard-page-wrapper"></div>');
+    page.wrap(wrapper);
+
+    // if there are no level2 or level3 headers synthesize a level3
+    // header to contain the (e.g. frame it, scroll container, etc.)
+    var headers = page.find('h2,h3');
+    if (headers.length === 0)
+      page.wrapInner('<div class="section level3"></div>');
+
+    // hoist up any content before level 2 or level 3 headers
+    var children = page.children();
+    children.each(function(index) {
+      if ($(this).hasClass('level2') || $(this).hasClass('level3'))
+        return false;
+      $(this).insertBefore(page);
+    });
+
+    // determine orientation and fillPage behavior for distinct media
+    var orientation, fillPage, storyboard;
+
+    // media: mobile phone
+    if (isMobilePhone()) {
+
+      // if there is a sidebar we need to ensure it's content
+      // is properly framed as an h3
+      var sidebar = page.find('.section.sidebar');
+      sidebar.removeClass('sidebar');
+      sidebar.wrapInner('<div class="section level3"></div>');
+      var h2 = sidebar.find('h2');
+      var h3 = $('<h3></h3>');
+      h3.append(h2.contents());
+      h3.insertBefore(h2);
+      h2.detach();
+
+      // wipeout h2 elements then enclose them in a single h2
+      var level2 = page.find('div.section.level2');
+      level2.each(function() {
+        level2.children('h2').remove();
+        level2.children().unwrap();
+      });
+      page.wrapInner('<div class="section level2"></div>');
+
+      // substitute mobile images
+      if (isPortrait()) {
+        var mobileFigures = $('img.mobile-figure');
+        mobileFigures.each(function() {
+          // get the src (might be base64 encoded)
+          var src = $(this).attr('src');
+
+          // find it's peer
+          var id = $(this).attr('data-mobile-figure-id');
+          var img = $('img[data-figure-id=' + id + "]");
+          img.attr('src', src)
+             .attr('width', _options.defaultFigWidthMobile)
+             .attr('height', _options.defaultFigHeightMobile);
+        });
+      }
+
+      // hoist storyboard commentary into it's own section
+      if (page.hasClass('storyboard')) {
+        var commentaryHR = page.find('div.section.level3 hr');
+        commentaryHR.each(function() {
+          var commentary = $(this).nextAll().detach();
+          var commentarySection = $('<div class="section level3"></div>');
+          commentarySection.append(commentary);
+          commentarySection.insertAfter($(this).closest('div.section.level3'));
+          $(this).remove();
+        });
+      }
+
+      // force a non full screen layout by columns
+      orientation = _options.orientation = 'columns';
+      fillPage = _options.fillPage = false;
+      storyboard = _options.storyboard = false;
+
+    // media: desktop
+    } else {
+
+      // determine orientation
+      orientation = page.attr('data-orientation');
+      if (orientation !== 'rows' && orientation != 'columns')
+        orientation = _options.orientation;
+
+      // determine storyboard mode
+      storyboard = page.hasClass('storyboard');
+
+      // fillPage based on options (force for storyboard)
+      fillPage = _options.fillPage || storyboard;
+
+      // handle sidebar
+      var sidebar = page.find('.section.level2.sidebar');
+      if (sidebar.length > 0)
+        layoutSidebar(sidebar, page);
+    }
+
+    // give it and it's parent divs height: 100% if we are in fillPage mode
+    if (fillPage) {
+      page.addClass('vertical-layout-fill');
+      page.css('height', '100%');
+      page.parents('div').css('height', '100%');
+    } else {
+      page.addClass('vertical-layout-scroll');
+    }
+
+    // perform the layout
+    if (storyboard)
+      layoutPageAsStoryboard(page);
+    else if (orientation === 'rows')
+      layoutPageByRows(page, fillPage);
+    else if (orientation === 'columns')
+      layoutPageByColumns(page, fillPage);
+  }
+
+  function layoutSidebar(sidebar, content) {
+
+    // get it out of the header hierarchy
+    sidebar = sidebar.first();
+    if (sidebar.hasClass('level1')) {
+      sidebar.removeClass('level1');
+      sidebar.children('h1').remove();
+    } else if (sidebar.hasClass('level2')) {
+      sidebar.removeClass('level2');
+      sidebar.children('h2').remove();
+    }
+
+    // determine width
+    var sidebarWidth = isTablet() ? 220 : 250;
+    var dataWidth = parseInt(sidebar.attr('data-width'));
+    if (dataWidth)
+      sidebarWidth = dataWidth;
+
+    // set the width and shift the page right to accomodate the sidebar
+    sidebar.css('width', sidebarWidth + 'px');
+    content.css('padding-left', sidebarWidth + 'px');
+
+    // wrap it's contents in a form
+    sidebar.wrapInner($('<form></form>'));
+  }
+
+  function layoutPageAsStoryboard(page) {
+
+    // create storyboard navigation
+    var nav = $('<div class="storyboard-nav"></div>');
+
+    // add navigation buttons
+    var prev = $('<button class="sbprev"><i class="fa fa-angle-left"></i></button>');
+    nav.append(prev);
+    var next= $('<button class="sbnext"><i class="fa fa-angle-right"></i></button>');
+    nav.append(next);
+
+    // add navigation frame
+    var frameList = $('<div class="sbframelist"></div>');
+    nav.append(frameList);
+    var ul = $('<ul></ul>');
+    frameList.append(ul);
+
+     // find all the level3 sections (those are the storyboard frames)
+    var frames = page.find('div.section.level3');
+    frames.each(function() {
+
+      // mark it
+      $(this).addClass('sbframe');
+
+      // divide it into chart content and (optional) commentary
+      $(this).addClass('dashboard-column-orientation');
+
+      // stuff the chart into it's own div w/ flex
+      $(this).wrapInner('<div class="sbframe-component"></div>');
+      setFlex($(this), 1);
+      var frame = $(this).children('.sbframe-component');
+
+      // extract the title from the h3
+      var li = $('<li></li>');
+      var h3 = frame.children('h3');
+      li.append(h3.contents());
+      h3.detach();
+      ul.append(li);
+
+      // extract commentary
+      var hr = frame.children('hr');
+      if (hr.length) {
+        var commentary = hr.nextAll().detach();
+        hr.remove();
+        var commentaryFrame = $('<div class="sbframe-commentary"></div>');
+        commentaryFrame.addClass('flowing-content-shim');
+        commentaryFrame.addClass('flowing-content-container');
+        commentaryFrame.append(commentary);
+        $(this).append(commentaryFrame);
+
+        // look for a data-commentary-width attribute
+        var commentaryWidth = $(this).attr('data-commentary-width');
+        if (commentaryWidth)
+          commentaryFrame.css('width', commentaryWidth + 'px');
+      }
+
+      // layout the chart (force flex)
+      var result = layoutChart(frame, true);
+
+      // ice the notes if there are none
+      if (!result.notes)
+        frame.find('.chart-notes').remove();
+
+      // set flex on chart
+      setFlex(frame, 1);
+    });
+
+    // create a div to hold all the frames
+    var frameContent = $('<div class="sbframe-content"></div>');
+    frameContent.addClass('dashboard-row-orientation');
+    frameContent.append(frames.detach());
+
+    // row orientation to stack nav and frame content
+    page.addClass('dashboard-row-orientation');
+    page.append(nav);
+    page.append(frameContent);
+    setFlex(frameContent, 1);
+
+    // initialize sly
+    var sly = new Sly(frameList, {
+    		horizontal: true,
+    		itemNav: 'basic',
+    		smart: true,
+    		activateOn: 'click',
+    		startAt: 0,
+    		scrollBy: 1,
+    		activatePageOn: 'click',
+    		speed: 200,
+    		moveBy: 600,
+    		dragHandle: true,
+    		dynamicHandle: true,
+    		clickBar: true,
+    		keyboardNavBy: 'items',
+    		next: next,
+    		prev: prev
+    	}).init();
+
+    // make first frame active
+    frames.removeClass('active');
+    frames.first().addClass('active');
+
+    // subscribe to frame changed events
+    sly.on('active', function (eventName, itemIndex) {
+      frames.removeClass('active');
+      frames.eq(itemIndex).addClass('active')
+                          .trigger('shown');
+    });
+  }
+
+  function layoutPageByRows(page, fillPage) {
+
+    // row orientation
+    page.addClass('dashboard-row-orientation');
+
+    // find all the level2 sections (those are the rows)
+    var rows = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (rows.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      rows = page.find('div.section.level2');
+    }
+
+    rows.each(function () {
+
+      // flags
+      var haveNotes = false;
+      var haveFlexHeight = true;
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // give it row layout semantics if it's not a tabset
+      if (!isTabset)
+        $(this).addClass('dashboard-row');
+
+      // find all of the level 3 subheads
+      var columns = $(this).find('div.section.level3');
+
+      // determine figureSizes sizes
+      var figureSizes = chartFigureSizes(columns);
+
+      // fixup the columns
+      columns.each(function(index) {
+
+        // layout the chart (force flex if we are in a tabset)
+        var result = layoutChart($(this), isTabset);
+
+        // update flexHeight state
+        if (!result.flex)
+          haveFlexHeight = false;
+
+        // update state
+        if (result.notes)
+          haveNotes = true;
+
+        // set the column flex based on the figure width
+        // (value boxes will just get the default figure width)
+        var chartWidth = figureSizes[index].width;
+        setFlex($(this), chartWidth + ' ' + chartWidth + ' 0px');
+
+      });
+
+      // remove empty chart note divs
+      if (isTabset)
+        $(this).find('.chart-notes').filter(function() {
+            return $(this).html() === "&nbsp;";
+        }).remove();
+      if (!haveNotes)
+        $(this).find('.chart-notes').remove();
+
+       // make it a flexbox row
+      if (haveFlexHeight)
+        $(this).addClass('dashboard-row-flex');
+
+      // now we can set the height on all the wrappers (based on maximum
+      // figure height + room for title and notes, or data-height on the
+      // container if specified). However, don't do this if there is
+      // no flex on any of the constituent columns
+      var flexHeight = null;
+      var dataHeight = parseInt($(this).attr('data-height'));
+      if (dataHeight)
+        flexHeight = adjustedHeight(dataHeight, columns.first());
+      else if (haveFlexHeight)
+        flexHeight = maxChartHeight(figureSizes, columns);
+      if (flexHeight) {
+        if (fillPage)
+          setFlex($(this), flexHeight + ' ' + flexHeight + ' 0px');
+        else {
+          $(this).css('height', flexHeight + 'px');
+          setFlex($(this), '0 0 ' + flexHeight + 'px');
+        }
+      }
+
+    });
+  }
+
+  function layoutPageByColumns(page, fillPage) {
+
+    // column orientation
+    page.addClass('dashboard-column-orientation');
+
+    // find all the level2 sections (those are the columns)
+    var columns = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (columns.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      columns = page.find('div.section.level2');
+    }
+
+    // layout each column
+    columns.each(function (index) {
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // make it a flexbox column
+      $(this).addClass('dashboard-column');
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // find all the h3 elements
+      var rows = $(this).find('div.section.level3');
+
+      // get the figure sizes for the rows
+      var figureSizes = chartFigureSizes(rows);
+
+      // column flex is the max row width (or data-width if specified)
+      var flexWidth;
+      var dataWidth = parseInt($(this).attr('data-width'));
+      if (dataWidth)
+        flexWidth = dataWidth;
+      else
+        flexWidth = maxChartWidth(figureSizes);
+      setFlex($(this), flexWidth + ' ' + flexWidth + ' 0px');
+
+      // layout each chart
+      rows.each(function(index) {
+
+        // perform the layout
+        var result = layoutChart($(this), false);
+
+        // ice the notes if there are none
+        if (!result.notes)
+          $(this).find('.chart-notes').remove();
+
+        // set flex height based on figHeight, then adjust
+        if (result.flex) {
+          var chartHeight = figureSizes[index].height;
+          chartHeight = adjustedHeight(chartHeight, $(this));
+          if (fillPage)
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' 0px');
+          else {
+            $(this).css('height', chartHeight + 'px');
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' ' + chartHeight + 'px');
+          }
+        }
+      });
+    });
+  }
+
+  function chartFigureSizes(charts) {
+
+    // sizes
+    var figureSizes = new Array(charts.length);
+
+    // check each chart
+    charts.each(function(index) {
+
+      // start with default
+      figureSizes[index] = {
+        width: _options.defaultFigWidth,
+        height: _options.defaultFigHeight
+      };
+
+      // look for data-height or data-width then knit options
+      var dataWidth = parseInt($(this).attr('data-width'));
+      var dataHeight = parseInt($(this).attr('data-height'));
+      var knitrOptions = $(this).find('.knitr-options:first');
+      var knitrWidth, knitrHeight;
+      if (knitrOptions) {
+        knitrWidth = parseInt(knitrOptions.attr('data-fig-width'));
+        knitrHeight =  parseInt(knitrOptions.attr('data-fig-height'));
+      }
+
+      // width
+      if (dataWidth)
+        figureSizes[index].width = dataWidth;
+      else if (knitrWidth)
+        figureSizes[index].width = knitrWidth;
+
+      // height
+      if (dataHeight)
+        figureSizes[index].height = dataHeight;
+      else if (knitrHeight)
+        figureSizes[index].height = knitrHeight;
+    });
+
+    // return sizes
+    return figureSizes;
+  }
+
+  function maxChartHeight(figureSizes, charts) {
+
+    // first compute the maximum height
+    var maxHeight = _options.defaultFigHeight;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].height > maxHeight)
+        maxHeight = figureSizes[i].height;
+
+    // now add offests for chart title and chart notes
+    if (charts.length)
+      maxHeight = adjustedHeight(maxHeight, charts.first());
+
+    return maxHeight;
+  }
+
+  function adjustedHeight(height, chart) {
+    if (chart.length > 0) {
+      var chartTitle = chart.find('.chart-title');
+      if (chartTitle.length)
+        height += chartTitle.first().outerHeight();
+      var chartNotes = chart.find('.chart-notes');
+      if (chartNotes.length)
+        height += chartNotes.first().outerHeight();
+    }
+    return height;
+  }
+
+  function maxChartWidth(figureSizes) {
+    var maxWidth = _options.defaultFigWidth;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].width > maxWidth)
+        maxWidth = figureSizes[i].width;
+    return maxWidth;
+  }
+
+  // layout a chart
+  function layoutChart(chart, forceFlex) {
+
+    // state to return
+    var result = {
+      notes: false,
+      flex: false
+    };
+
+    // extract the title
+    var title = extractTitle(chart);
+
+    // find components that apply to this container
+    var components = componentsFind(chart);
+
+    // if it's a custom component then call it and return
+    var customComponents = componentsCustom(components);
+    if (customComponents.length) {
+      componentsLayout(customComponents, title, chart);
+      result.notes = false;
+      result.flex = forceFlex || componentsFlex(customComponents);
+      return result;
+    }
+
+    // put all the content in a chart wrapper div
+    chart.addClass('chart-wrapper');
+    chart.wrapInner('<div class="chart-stage"></div>');
+    var chartContent = chart.children('.chart-stage');
+
+    // flex the content if appropriate
+    result.flex = forceFlex || componentsFlex(components);
+    if (result.flex) {
+      // add flex classes
+      chart.addClass('chart-wrapper-flex');
+      chartContent.addClass('chart-stage-flex');
+
+      // additional shim to break out of flexbox sizing
+      chartContent.wrapInner('<div class="chart-shim"></div>');
+      chartContent = chartContent.children('.chart-shim');
+    }
+
+    // set custom data-padding attribute
+    var pad = chart.attr('data-padding');
+    if (pad) {
+      if (pad === "0")
+        chart.addClass('no-padding');
+      else {
+        pad = pad + 'px';
+        chartContent.css('left', pad)
+                    .css('top', pad)
+                    .css('right', pad)
+                    .css('bottom', pad)
+      }
+    }
+
+    // call compoents
+    componentsLayout(components, title, chartContent);
+
+    // also activate components on shiny output
+    findShinyOutput(chartContent).on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+
+          // see if we opted out of flex based on our output (for shiny
+          // we can't tell what type of output we have until after the
+          // value is bound)
+          var components = componentsFind(element);
+          var flex = forceFlex || componentsFlex(components);
+          if (!flex) {
+            chart.css('height', "");
+            setFlex(chart, "");
+            chart.removeClass('chart-wrapper-flex');
+            chartContent.removeClass('chart-stage-flex');
+            chartContent.children().unwrap();
+          }
+
+          // perform layout
+          componentsLayout(components, title, element.parent());
+        }, 10);
+      });
+
+    // add the title
+    var chartTitle = $('<div class="chart-title"></div>');
+    chartTitle.append(title);
+    chart.prepend(chartTitle);
+
+    // add the notes section
+    var chartNotes = $('<div class="chart-notes"></div>');
+    chartNotes.html('&nbsp;');
+    chart.append(chartNotes);
+
+    // attempt to extract notes if we have a component
+    if (components.length)
+      result.notes = extractChartNotes(chartContent, chartNotes);
+
+    // return result
+    return result;
+  }
+
+  // build a tabset from a section div with the .tabset class
+  function layoutTabset(tabset) {
+
+    // check for fade option
+    var fade = tabset.hasClass("tabset-fade");
+    var pills = tabset.hasClass("tabset-pills");
+    var navClass = pills ? "nav-pills" : "nav-tabs";
+
+    // determine the heading level of the tabset and tabs
+    var match = tabset.attr('class').match(/level(\d) /);
+    if (match === null)
+      return;
+    var tabsetLevel = Number(match[1]);
+    var tabLevel = tabsetLevel + 1;
+
+    // find all subheadings immediately below
+    var tabs = tabset.find("div.section.level" + tabLevel);
+    if (!tabs.length)
+      return;
+
+    // create tablist and tab-content elements
+    var tabList = $('<ul class="nav ' + navClass + '" role="tablist"></ul>');
+    $(tabs[0]).before(tabList);
+    var tabContent = $('<div class="tab-content"></div>');
+    $(tabs[0]).before(tabContent);
+
+    // build the tabset
+    var activeTab = 0;
+    tabs.each(function(i) {
+
+      // get the tab div
+      var tab = $(tabs[i]);
+
+      // get the id then sanitize it for use with bootstrap tabs
+      var id = tab.attr('id');
+
+      // see if this is marked as the active tab
+      if (tab.hasClass('active'))
+        activeTab = i;
+
+      // sanitize the id for use with bootstrap tabs
+      id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+      tab.attr('id', id);
+
+      // get the heading element within it and grab it's text
+      var heading = tab.find('h' + tabLevel + ':first');
+      var headingDom = heading.contents();
+
+      // build and append the tab list item
+      var a = $('<a role="tab" data-toggle="tab" data-bs-toggle="tab" class="nav-link"></a>');
+      a.append(headingDom);
+      a.attr('href', '#' + id);
+      a.attr('aria-controls', id);
+      var li = $('<li role="presentation" class="nav-item"></li>');
+      li.append(a);
+      tabList.append(li);
+
+      // set it's attributes
+      tab.attr('role', 'tabpanel');
+      tab.addClass('tab-pane');
+      tab.addClass('tabbed-pane');
+      tab.addClass('no-title');
+      if (fade)
+        tab.addClass('fade');
+
+      // move it into the tab content div
+      tab.detach().appendTo(tabContent);
+    });
+
+    // set active tab
+    $(tabList.children()[activeTab]).tab("show");
+    var active = $(tabContent.children('div.section')[activeTab]);
+    active.addClass('active');
+    if (fade)
+      active.addClass('in');
+
+    // add nav-tabs-custom
+    tabset.addClass('nav-tabs-custom');
+
+    // internal layout is dashboard-column with tab-content flexing
+    tabset.addClass('dashboard-column');
+    setFlex(tabContent, 1);
+  }
+
+  // one time global initialization for components
+  function componentsInit(dashboardContainer) {
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.init)
+        component.init(dashboardContainer);
+    }
+  }
+
+  // find components that apply within a container
+  function componentsFind(container) {
+
+    // look for components
+    var components = [];
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.find(container).length)
+        components.push(component);
+    }
+
+    // if there were none then use a special flowing content component
+    // that just adds a scrollbar in fillPage mode
+    if (components.length == 0) {
+      components.push({
+        find: function(container) {
+          return container;
+        },
+
+        flex: function(fillPage) {
+          return fillPage;
+        },
+
+        layout: function(title, container, element, fillPage) {
+          if (fillPage) {
+            container.addClass('flowing-content-shim');
+            container.addClass('flowing-content-container');
+          }
+        }
+      });
+    }
+
+    return components;
+  }
+
+  // if there is a custom component then pick it out
+  function componentsCustom(components) {
+    var customComponent = [];
+    for (var i=0; i<components.length; i++)
+      if (components[i].type === "custom") {
+        customComponent.push(components[i]);
+        break;
+      }
+    return customComponent;
+  }
+
+  // query all components for flex
+  function componentsFlex(components) {
+
+    // no components at all means no flex
+    if (components.length === 0)
+      return false;
+
+    // otherwise query components (assume true unless we see false)
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++)
+      if (components[i].flex && !components[i].flex(_options.fillPage))
+        return false;
+    return true;
+  }
+
+  // layout all components
+  function componentsLayout(components, title, container) {
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++) {
+      var element = components[i].find(container);
+      if (components[i].layout) {
+        // call layout (don't call other components if it returns false)
+        var result = components[i].layout(title, container, element, _options.fillPage);
+        if (result === false)
+          return;
+      }
+    }
+  }
+
+  // get a reference to the h3, discover it's inner html, and remove it
+  function extractTitle(container) {
+    var h3 = container.children('h3').first();
+    var title = '';
+    if (!container.hasClass('no-title'))
+      title = h3.contents();
+    h3.detach();
+    return title;
+  }
+
+  // extract chart notes
+  function extractChartNotes(chartContent, chartNotes) {
+    // look for a terminating blockquote or image caption
+    var blockquote = chartContent.children('blockquote:last-child');
+    var caption = chartContent.children('div.image-container')
+                              .children('p.caption');
+    if (blockquote.length) {
+      chartNotes.empty().append(blockquote.children('p:first-child').contents());
+      blockquote.remove();
+      return true;
+    } else if (caption.length) {
+      chartNotes.empty().append(caption.contents());
+      caption.remove();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function findShinyOutput(chartContent) {
+    return chartContent.find('.shiny-text-output, .shiny-html-output');
+  }
+
+  // safely detect rendering on a mobile phone
+  function isMobilePhone() {
+    try
+    {
+      return ! window.matchMedia("only screen and (min-width: 768px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  function isFillPage() {
+    return _options.fillPage;
+  }
+
+  // detect portrait mode
+  function isPortrait() {
+    return ($(window).width() < $(window).height());
+  }
+
+  // safely detect rendering on a tablet
+  function isTablet() {
+    try
+    {
+      return window.matchMedia("only screen and (min-width: 769px) and (max-width: 992px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  // test whether this is a shiny doc
+  function isShinyDoc() {
+    return (typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings);
+  }
+
+  // set flex using vendor specific prefixes
+  function setFlex(el, flex) {
+    el.css('-webkit-box-flex', flex)
+      .css('-webkit-flex', flex)
+      .css('-ms-flex', flex)
+      .css('flex', flex);
+  }
+
+  // support bookmarking of pages
+  function handleLocationHash() {
+
+    // restore tab/page from bookmark
+    var hash = window.decodeURIComponent(window.location.hash);
+    if (hash.length > 0) {
+      // Update the tab without .showPage() so that we don't change page history
+      $('ul.nav a[href="' + hash + '"]').tab('show');
+    }
+
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+      var hash = window.decodeURIComponent(window.location.hash);
+      var activeTab = $('ul.nav a[href="' + hash + '"]');
+      if (activeTab.length) {
+        activeTab.tab('show');
+      } else {
+        // returning to the base page URL without a hash activates first tab
+        $('ul.nav a:first').tab('show');
+      }
+    });
+
+    // add a hash to the URL when the user clicks on a tab/page
+    $('.navbar-nav a[data-toggle="tab"]').on('click', function(e) {
+      var baseUrl = FlexDashboardUtils.urlWithoutHash(window.location.href);
+      var hash = FlexDashboardUtils.urlHash($(this).attr('href'));
+      var href = baseUrl + hash;
+      FlexDashboardUtils.setLocation(href);
+    });
+
+    // handle clicks of other links that should activate pages
+    var navPages = $('ul.navbar-nav li a[data-toggle=tab]');
+    navPages.each(function() {
+      var href =  $(this).attr('href');
+      var links = $('a[href="' + href + '"][data-toggle!=tab]');
+      links.each(function() {
+        $(this).on('click', function(e) {
+          window.FlexDashboardUtils.showPage(href);
+        });
+      });
+    });
+  }
+
+  // tweak Prism highlighting
+  function initPrismHighlighting() {
+
+    if (window.Prism) {
+      Prism.languages.insertBefore('r', 'comment', {
+        'heading': [
+          {
+            // title 1
+        	  // =======
+
+        	  // title 2
+        	  // -------
+        	  pattern: /\w+.*(?:\r?\n|\r)(?:====+|----+)/,
+            alias: 'operator'
+          },
+          {
+            // ### title 3
+            pattern: /(^\s*)###[^#].+/m,
+            lookbehind: true,
+            alias: 'operator'
+          }
+        ]
+      });
+
+      // prism highlight
+      Prism.highlightAll();
+    }
+  }
+
+  FlexDashboard.prototype = {
+    constructor: FlexDashboard,
+    init: init,
+    isMobilePhone: isMobilePhone,
+    isFillPage: isFillPage
+  };
+
+  return FlexDashboard;
+
+})();
+
+// utils
+window.FlexDashboardUtils = {
+  resizableImage: function(img) {
+    var src = img.attr('src');
+    var url = 'url("' + src + '")';
+    img.parent().css('background', url)
+                .css('background-size', 'contain')
+                .css('background-repeat', 'no-repeat')
+                .css('background-position', 'center')
+                .addClass('image-container');
+  },
+  setLocation: function(href) {
+    if (history && history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      window.location.replace(href);
+    }
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+  },
+  showPage: function(href) {
+    $('ul.navbar-nav li a[href="' + href + '"]').tab('show');
+    var baseUrl = this.urlWithoutHash(window.location.href);
+    var loc = baseUrl + href;
+    this.setLocation(loc);
+  },
+  showLinkedValue: function(href) {
+    // check for a page link
+    if ($('ul.navbar-nav li a[data-toggle=tab][href="' + href + '"]').length > 0)
+      this.showPage(href);
+    else
+      window.open(href);
+  },
+  urlWithoutHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(0, hashLoc);
+    else
+      return url;
+  },
+  urlHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(hashLoc);
+    else
+      return "";
+  }
+};
+
+window.FlexDashboard = new FlexDashboard();
+
+// empty content
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    if (container.find('p').length == 0)
+      return container;
+    else
+      return $();
+  }
+})
+
+// plot image
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('p')
+                    .children('img:only-child');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// plot image (figure style)
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.figure').children('img');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// htmlwidget
+window.FlexDashboardComponents.push({
+
+  init: function(dashboardContainer) {
+    // trigger "shown" after initial layout to force static htmlwidgets
+    // in runtime: shiny to be resized after the dom has been transformed
+    dashboardContainer.on('flexdashboard:layoutcomplete', function(event) {
+      setTimeout(function() {
+        dashboardContainer.trigger('shown');
+      }, 200);
+    });
+  },
+
+  find: function(container) {
+    return container.children('div[id^="htmlwidget-"],div.html-widget');
+  }
+});
+
+// gauge
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.html-widget.gauge');
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+
+  }
+
+});
+
+// shiny output
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.children('div[class^="shiny-"]');
+  }
+});
+
+// bootstrap table
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    var bsTable = container.find('table.table');
+    if (bsTable.length !== 0)
+      return bsTable;
+    else
+      return container.find('tr.header').parent('thead').parent('table');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var bsTable = element;
+
+    // fixup xtable generated tables with a proper thead
+    var headerRow = bsTable.find('tbody > tr:first-child > th').parent();
+    if (headerRow.length > 0) {
+      var thead = $('<thead></thead>');
+      bsTable.prepend(thead);
+      headerRow.detach().appendTo(thead);
+    }
+
+    // improve appearance
+    container.addClass('bootstrap-table');
+
+    // for fill page provide scrolling w/ sticky headers
+    if (fillPage) {
+      // force scrollbar on overflow
+      container.addClass('flowing-content-shim');
+
+      // stable table headers when scrolling
+      bsTable.stickyTableHeaders({
+        scrollableArea: container
+      });
+    }
+  }
+});
+
+// embedded shiny app
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('iframe.shiny-frame');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage) {
+      element.attr('height', '100%');
+    } else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (!height)
+        height = element.attr('height');
+      if (!height)
+        element.attr('height', 500);
+    }
+  }
+});
+
+// shiny fillRow or fillCol
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('.flexfill-container');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage)
+      element.css('height', '100%');
+    else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (height === "100%" || height === "auto" || height === "initial" ||
+          height === "inherit" || !height) {
+        element.css('height', 500);
+      }
+    }
+  }
+});
+
+// valueBox
+window.FlexDashboardComponents.push({
+
+  type: "custom",
+
+  find: function(container) {
+    if (container.find('span.value-output, .shiny-valuebox-output').length)
+      return container;
+    else
+      return $();
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var chartTitle = title;
+    var valueBox = element;
+
+    // add value-box class to container
+    container.addClass('value-box');
+
+    // value paragraph
+    var value = $('<p class="value"></p>');
+
+    // if we have shiny-text-output then just move it in
+    var valueOutputSpan = [];
+    var shinyOutput = valueBox.find('.shiny-valuebox-output').detach();
+    if (shinyOutput.length) {
+      valueBox.children().remove();
+      shinyOutput.html("&mdash;");
+      value.append(shinyOutput);
+    } else {
+      // extract the value (remove leading vector index)
+      var chartValue = valueBox.text().trim();
+      chartValue = chartValue.replace("[1] ", "");
+      valueOutputSpan = valueBox.find('span.value-output').detach();
+      valueBox.children().remove();
+      value.text(chartValue);
+    }
+
+    // caption
+    var caption = $('<p class="caption"></p>');
+    caption.append(chartTitle);
+
+    // build inner div for value box and add it
+    var inner = $('<div class="inner"></div>');
+    inner.append(value);
+    inner.append(caption);
+    valueBox.append(inner);
+
+    // add icon if specified
+    var icon = $('<div class="icon"><i></i></div>');
+    valueBox.append(icon);
+    function setIcon(chartIcon) {
+      var iconLib = "";
+      var iconSplit = chartIcon.split(" ");
+      if (iconSplit.length > 1) {
+        iconLib = iconSplit[0];
+        chartIcon = iconSplit.slice(1).join(" ");
+      } else {
+        var components = chartIcon.split("-");
+        if (components.length > 1)
+          iconLib = components[0];
+      }
+      icon.children('i').attr('class', iconLib + ' ' + chartIcon);
+    }
+    var chartIcon = valueBox.attr('data-icon');
+    if (chartIcon)
+      setIcon(chartIcon);
+
+    // handle data attributes in valueOutputSpan
+    function handleValueOutput(valueOutput) {
+
+      // caption
+      var dataCaption = valueOutput.attr('data-caption');
+      if (dataCaption)
+        caption.html(dataCaption);
+
+      // icon
+      var dataIcon = valueOutput.attr('data-icon');
+      if (dataIcon)
+        setIcon(dataIcon);
+
+      // If valueBox(color=) was an accent color, this attr should
+      // be populated with the accent color and the relevant CSS comes
+      // in through HTML dependencies
+      var dataColorAccent = valueOutput.attr('data-color-accent');
+      var valueBoxClasses = "value-box-" + (["primary", "info", "danger", "warning", "success"].join(" value-box-"));
+      if (dataColorAccent) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.addClass('value-box-' + dataColorAccent);
+      }
+
+      // If valueBox(color=) was a CSS color, these other data-color-*
+      // attrs will be populated
+      var dataColor = valueOutput.attr('data-color');
+      if (dataColor) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.css('background-color', dataColor);
+      }
+      var dataColorText = valueOutput.attr('data-color-text');
+      if (dataColorText) {
+        valueBox.find(".inner").css('color', dataColorText);
+      }
+      var dataColorIcon = valueOutput.attr('data-color-icon');
+      if (dataColorIcon) {
+        valueBox.find(".icon").css('color', dataColorIcon);
+      }
+
+      // url
+      var dataHref = valueOutput.attr('data-href');
+      if (dataHref) {
+        valueBox.addClass('linked-value');
+        valueBox.off('click.value-box');
+        valueBox.on('click.value-box', function(e) {
+          window.FlexDashboardUtils.showLinkedValue(dataHref);
+        });
+      }
+    }
+
+    // check for a valueOutputSpan
+    if (valueOutputSpan.length > 0) {
+      handleValueOutput(valueOutputSpan);
+    }
+
+    // if we have a shinyOutput then bind a listener to handle
+    // new valueOutputSpan values
+    shinyOutput.on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+          var valueOutputSpan = element.find('span.value-output');
+          if (valueOutputSpan.length > 0)
+            handleValueOutput(valueOutputSpan);
+        }, 10);
+      }
+    );
+  }
+});
+</script>
+
+<div id="dashboard-container">
+
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="översikt" class="section level1" data-orientation="rows">
+<h1>Översikt</h1>
+<div id="section" class="section level2 tabset tabset-pills"
+data-height="200">
+<h2 class="tabset tabset-pills"></h2>
+<div id="om-initiativet" class="section level3">
+<h3>Om initiativet</h3>
+<p><em>Svensk statistik</em> är ett initiativ med det huvudsakliga
+syftet att visualisera utvecklingen i Sverige utifrån ett antal
+parametrar. Genom SCB är Sverige ett land som ligger i framkant i att
+lagra registerdata och föra annan statistik på befolkningsnivå, men
+denna statistik är inte alltid så enkel att ta till sig. Detta är ett
+försök att förenkla möjligheten att ta till sig av denna data.
+<br><br></p>
+</div>
+</div>
+<div id="section-1" class="section level2 tabset tabset-pills"
+data-height="400">
+<h2 class="tabset tabset-pills"></h2>
+<div id="om-rapporten" class="section level3">
+<h3>Om rapporten</h3>
+<p>I denna rapport bemöts området <strong>Arbete</strong> utifrån dessa
+områden: <br><br> - <strong>Arbete</strong>: Sysselsättning, arbetstid
+och arbetsfrånvaro. <br> - <strong>Anställning</strong>: Antal anställda
+utifrån sektor och näringsgren. <br> - <strong>Löner</strong>:
+Lönespridning och jämförelser utifrån ålderskategori och kön. <br> <br>
+Använd navigationspanelen högst upp för att se svaren utifrån olika
+områden. <em>Får figurerna inte plats på sidan? Testa att zooma ut genom
+att hålla in <code>Ctrl</code> + <code>-</code>.</em></p>
+</div>
+</div>
+<div id="section-2" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="källor" class="section level3">
+<h3>Källor</h3>
+<ul>
+<li>Arbetstid: Klicka här <br></li>
+<li>Anställning: Klicka här <br></li>
+<li>Arbetsfrånvaro: Klicka här <br></li>
+<li>Löner utifrån sektor: Klicka här <br></li>
+<li>Löner utifrån näringsgren: Klicka här <br></li>
+<li>Löner utifrån utbildning: Klicka här <br></li>
+<li>Löner utifrån ålder: Klicka här <br></li>
+<li>Sysselsättning: Har utgått från SCB:s statistikdatabas sedan 2025.
+<br></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="sysselsättning" class="section level1"
+data-orientation="columns" data-navmenu="Arbete">
+<h1>Sysselsättning</h1>
+<div id="section-3" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="antal-sysselsatta-utifrån-kön" class="section level3">
+<h3>Antal sysselsatta utifrån kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-cec505e377ca6a8e0a56" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-cec505e377ca6a8e0a56">{"x":{"data":[{"orientation":"v","width":[0.44999999999999996,0.45000000000000018],"base":[0,0],"x":[0.77500000000000002,1.7749999999999999],"y":[2407800,1987300],"text":["Sysselsatta <br />Kön:  Kvinnor <br />Antal:  2,407,800","Sysselsatta i arbete <br />Kön:  Kvinnor <br />Antal:  1,987,300"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018],"base":[0,0],"x":[1.2250000000000001,2.2250000000000001],"y":[2642100,2305000],"text":["Sysselsatta <br />Kön:  Män <br />Antal:  2,642,100","Sysselsatta i arbete <br />Kön:  Män <br />Antal:  2,305,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":92.254047322540515},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,2.6000000000000001],"tickmode":"array","ticktext":["Sysselsatta","Sysselsatta i arbete"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Sysselsatta","Sysselsatta i arbete"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-132105,2774205],"tickmode":"array","ticktext":["0","1,000,000","2,000,000"],"tickvals":[0,1000000,2000000],"categoryorder":"array","categoryarray":["0","1,000,000","2,000,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c5b8115ac":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c5b8115ac","visdat":{"297c5b8115ac":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-4" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="antal-sysselsatta-i-arbete-utifrån-ålderskategori-och-kön"
+class="section level3">
+<h3>Antal sysselsatta i arbete utifrån ålderskategori och kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-8d265d3f07b3ba7ed752" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-8d265d3f07b3ba7ed752">{"x":{"data":[{"orientation":"v","width":[0.44999999999999996,0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999929],"base":[0,0,0,0,0],"x":[0.77500000000000002,1.7749999999999999,2.7749999999999999,3.7749999999999999,4.7750000000000004],"y":[220700,440000,459300,480700,392100],"text":["15-24 <br />Kön:  Kvinnor <br />Antal:  220,700","25-34 <br />Kön:  Kvinnor <br />Antal:  440,000","35-44 <br />Kön:  Kvinnor <br />Antal:  459,300","45-54 <br />Kön:  Kvinnor <br />Antal:  480,700","55-64 <br />Kön:  Kvinnor <br />Antal:  392,100"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999973,0.44999999999999929],"base":[0,0,0,0,0],"x":[1.2250000000000001,2.2250000000000001,3.2250000000000001,4.2249999999999996,5.2249999999999996],"y":[247300,541300,550800,523400,445100],"text":["15-24 <br />Kön:  Män <br />Antal:  247,300","25-34 <br />Kön:  Män <br />Antal:  541,300","35-44 <br />Kön:  Män <br />Antal:  550,800","45-54 <br />Kön:  Män <br />Antal:  523,400","55-64 <br />Kön:  Män <br />Antal:  445,100"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":79.501867995018699},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["15-24","25-34","35-44","45-54","55-64"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["15-24","25-34","35-44","45-54","55-64"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-27540,578340],"tickmode":"array","ticktext":["0","100,000","200,000","300,000","400,000","500,000"],"tickvals":[0,100000,200000,300000,400000,500000],"categoryorder":"array","categoryarray":["0","100,000","200,000","300,000","400,000","500,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c62c93d34":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c62c93d34","visdat":{"297c62c93d34":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="arbetstid" class="section level1" data-orientation="columns"
+data-navmenu="Arbete">
+<h1>Arbetstid</h1>
+<div id="section-5" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="arbetstidvecka-utifrån-kön-och-år" class="section level3">
+<h3>Arbetstid/vecka utifrån kön och år</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-e6cfc27d1c2d6011b132" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-e6cfc27d1c2d6011b132">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"y":[26.399999999999999,26.5,26.800000000000001,26.899999999999999,26.800000000000001,27.399999999999999,27.699999999999999,27.600000000000001,27.5,27.699999999999999,27.300000000000001,27.899999999999999,27.899999999999999,27.899999999999999,27.5,27.100000000000001,28.100000000000001,28,27.899999999999999],"text":["År:  2005 <br />Kön:  Kvinnor <br />Genomsnitt:  26.4","År:  2006 <br />Kön:  Kvinnor <br />Genomsnitt:  26.5","År:  2007 <br />Kön:  Kvinnor <br />Genomsnitt:  26.8","År:  2008 <br />Kön:  Kvinnor <br />Genomsnitt:  26.9","År:  2009 <br />Kön:  Kvinnor <br />Genomsnitt:  26.8","År:  2010 <br />Kön:  Kvinnor <br />Genomsnitt:  27.4","År:  2011 <br />Kön:  Kvinnor <br />Genomsnitt:  27.7","År:  2012 <br />Kön:  Kvinnor <br />Genomsnitt:  27.6","År:  2013 <br />Kön:  Kvinnor <br />Genomsnitt:  27.5","År:  2014 <br />Kön:  Kvinnor <br />Genomsnitt:  27.7","År:  2015 <br />Kön:  Kvinnor <br />Genomsnitt:  27.3","År:  2016 <br />Kön:  Kvinnor <br />Genomsnitt:  27.9","År:  2017 <br />Kön:  Kvinnor <br />Genomsnitt:  27.9","År:  2018 <br />Kön:  Kvinnor <br />Genomsnitt:  27.9","År:  2019 <br />Kön:  Kvinnor <br />Genomsnitt:  27.5","År:  2020 <br />Kön:  Kvinnor <br />Genomsnitt:  27.1","År:  2021 <br />Kön:  Kvinnor <br />Genomsnitt:  28.1","År:  2022 <br />Kön:  Kvinnor <br />Genomsnitt:  28","År:  2023 <br />Kön:  Kvinnor <br />Genomsnitt:  27.9"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(255,177,177,1)","dash":"solid"},"hoveron":"points","name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"y":[32.700000000000003,32.600000000000001,32.700000000000003,32.700000000000003,32,33.200000000000003,33,32.700000000000003,32.5,32.399999999999999,32.100000000000001,32.899999999999999,32.600000000000001,32.600000000000001,32.200000000000003,31,32.100000000000001,32,32.100000000000001],"text":["År:  2005 <br />Kön:  Män <br />Genomsnitt:  32.7","År:  2006 <br />Kön:  Män <br />Genomsnitt:  32.6","År:  2007 <br />Kön:  Män <br />Genomsnitt:  32.7","År:  2008 <br />Kön:  Män <br />Genomsnitt:  32.7","År:  2009 <br />Kön:  Män <br />Genomsnitt:  32","År:  2010 <br />Kön:  Män <br />Genomsnitt:  33.2","År:  2011 <br />Kön:  Män <br />Genomsnitt:  33","År:  2012 <br />Kön:  Män <br />Genomsnitt:  32.7","År:  2013 <br />Kön:  Män <br />Genomsnitt:  32.5","År:  2014 <br />Kön:  Män <br />Genomsnitt:  32.4","År:  2015 <br />Kön:  Män <br />Genomsnitt:  32.1","År:  2016 <br />Kön:  Män <br />Genomsnitt:  32.9","År:  2017 <br />Kön:  Män <br />Genomsnitt:  32.6","År:  2018 <br />Kön:  Män <br />Genomsnitt:  32.6","År:  2019 <br />Kön:  Män <br />Genomsnitt:  32.2","År:  2020 <br />Kön:  Män <br />Genomsnitt:  31","År:  2021 <br />Kön:  Män <br />Genomsnitt:  32.1","År:  2022 <br />Kön:  Män <br />Genomsnitt:  32","År:  2023 <br />Kön:  Män <br />Genomsnitt:  32.1"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(100,182,238,1)","dash":"solid"},"hoveron":"points","name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":47.621419676214209},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,19.600000000000001],"tickmode":"array","ticktext":["2005","2023"],"tickvals":[1,19],"categoryorder":"array","categoryarray":["2005","2023"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[13.5,46.5],"tickmode":"array","ticktext":["30"],"tickvals":[30],"categoryorder":"array","categoryarray":["30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnitt","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c3ad368da":{"x":{},"y":{},"colour":{},"text":{},"type":"scatter"}},"cur_data":"297c3ad368da","visdat":{"297c3ad368da":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-6" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="arbetstidvecka-utifrån-anställning-och-år"
+class="section level3">
+<h3>Arbetstid/vecka utifrån anställning och år</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-79e2e6cfb7e8ade56328" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-79e2e6cfb7e8ade56328">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"y":[29.899999999999999,29.800000000000001,30.100000000000001,30.199999999999999,29.800000000000001,30.800000000000001,30.899999999999999,30.600000000000001,30.5,30.5,30.100000000000001,30.899999999999999,30.899999999999999,30.800000000000001,30.5,29.600000000000001,30.699999999999999,30.600000000000001,30.800000000000001],"text":["År:  2005 <br />Anställning:  Fast anställda <br />Genomsnitt:  29.9","År:  2006 <br />Anställning:  Fast anställda <br />Genomsnitt:  29.8","År:  2007 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.1","År:  2008 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.2","År:  2009 <br />Anställning:  Fast anställda <br />Genomsnitt:  29.8","År:  2010 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.8","År:  2011 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.9","År:  2012 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.6","År:  2013 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.5","År:  2014 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.5","År:  2015 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.1","År:  2016 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.9","År:  2017 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.9","År:  2018 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.8","År:  2019 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.5","År:  2020 <br />Anställning:  Fast anställda <br />Genomsnitt:  29.6","År:  2021 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.7","År:  2022 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.6","År:  2023 <br />Anställning:  Fast anställda <br />Genomsnitt:  30.8"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(255,177,177,1)","dash":"solid"},"hoveron":"points","name":"Fast anställda","legendgroup":"Fast anställda","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"y":[27.800000000000001,28,28,27.399999999999999,26.800000000000001,28,27.899999999999999,27.399999999999999,27.300000000000001,27.699999999999999,27.399999999999999,27.600000000000001,26.899999999999999,27,26.600000000000001,26.199999999999999,26.399999999999999,26.5,25.300000000000001],"text":["År:  2005 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.8","År:  2006 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  28","År:  2007 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  28","År:  2008 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.4","År:  2009 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  26.8","År:  2010 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  28","År:  2011 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.9","År:  2012 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.4","År:  2013 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.3","År:  2014 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.7","År:  2015 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.4","År:  2016 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27.6","År:  2017 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  26.9","År:  2018 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  27","År:  2019 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  26.6","År:  2020 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  26.2","År:  2021 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  26.4","År:  2022 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  26.5","År:  2023 <br />Anställning:  Tidsbegränsat <br />Genomsnitt:  25.3"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(100,182,238,1)","dash":"solid"},"hoveron":"points","name":"Tidsbegränsat","legendgroup":"Tidsbegränsat","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":47.621419676214209},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,19.600000000000001],"tickmode":"array","ticktext":["2005","2023"],"tickvals":[1,19],"categoryorder":"array","categoryarray":["2005","2023"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[13.5,46.5],"tickmode":"array","ticktext":["30"],"tickvals":[30],"categoryorder":"array","categoryarray":["30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnitt","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Mätvariabel","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c53cda92":{"x":{},"y":{},"colour":{},"text":{},"type":"scatter"}},"cur_data":"297c53cda92","visdat":{"297c53cda92":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="arbetsfrånvaro" class="section level1"
+data-orientation="columns" data-navmenu="Arbete">
+<h1>Arbetsfrånvaro</h1>
+<div id="section-7" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="frånvarotimmar-från-arbete-utifrån-kön-och-år"
+class="section level3">
+<h3>Frånvarotimmar från arbete utifrån kön och år</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-7320057602a151d1e1fc" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-7320057602a151d1e1fc">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"y":[17789000,18024000,17853000,17785000,17990000,16963000,17078000,17931000,18465000,18713000,19808000,19072000,19651000,19959000,21367000,21697000,19864000,20864000,21390000],"text":["År:  2005 <br />Kön:  Kvinnor <br />Timmar:  17,789,000","År:  2006 <br />Kön:  Kvinnor <br />Timmar:  18,024,000","År:  2007 <br />Kön:  Kvinnor <br />Timmar:  17,853,000","År:  2008 <br />Kön:  Kvinnor <br />Timmar:  17,785,000","År:  2009 <br />Kön:  Kvinnor <br />Timmar:  17,990,000","År:  2010 <br />Kön:  Kvinnor <br />Timmar:  16,963,000","År:  2011 <br />Kön:  Kvinnor <br />Timmar:  17,078,000","År:  2012 <br />Kön:  Kvinnor <br />Timmar:  17,931,000","År:  2013 <br />Kön:  Kvinnor <br />Timmar:  18,465,000","År:  2014 <br />Kön:  Kvinnor <br />Timmar:  18,713,000","År:  2015 <br />Kön:  Kvinnor <br />Timmar:  19,808,000","År:  2016 <br />Kön:  Kvinnor <br />Timmar:  19,072,000","År:  2017 <br />Kön:  Kvinnor <br />Timmar:  19,651,000","År:  2018 <br />Kön:  Kvinnor <br />Timmar:  19,959,000","År:  2019 <br />Kön:  Kvinnor <br />Timmar:  21,367,000","År:  2020 <br />Kön:  Kvinnor <br />Timmar:  21,697,000","År:  2021 <br />Kön:  Kvinnor <br />Timmar:  19,864,000","År:  2022 <br />Kön:  Kvinnor <br />Timmar:  20,864,000","År:  2023 <br />Kön:  Kvinnor <br />Timmar:  21,390,000"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(255,177,177,1)","dash":"solid"},"hoveron":"points","name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"y":[16263000,16804000,16975000,17071000,17772000,15780000,16262000,17002000,17872000,18074000,18890000,17293000,18241000,18603000,19364000,21154000,19084000,19632000,19929000],"text":["År:  2005 <br />Kön:  Män <br />Timmar:  16,263,000","År:  2006 <br />Kön:  Män <br />Timmar:  16,804,000","År:  2007 <br />Kön:  Män <br />Timmar:  16,975,000","År:  2008 <br />Kön:  Män <br />Timmar:  17,071,000","År:  2009 <br />Kön:  Män <br />Timmar:  17,772,000","År:  2010 <br />Kön:  Män <br />Timmar:  15,780,000","År:  2011 <br />Kön:  Män <br />Timmar:  16,262,000","År:  2012 <br />Kön:  Män <br />Timmar:  17,002,000","År:  2013 <br />Kön:  Män <br />Timmar:  17,872,000","År:  2014 <br />Kön:  Män <br />Timmar:  18,074,000","År:  2015 <br />Kön:  Män <br />Timmar:  18,890,000","År:  2016 <br />Kön:  Män <br />Timmar:  17,293,000","År:  2017 <br />Kön:  Män <br />Timmar:  18,241,000","År:  2018 <br />Kön:  Män <br />Timmar:  18,603,000","År:  2019 <br />Kön:  Män <br />Timmar:  19,364,000","År:  2020 <br />Kön:  Män <br />Timmar:  21,154,000","År:  2021 <br />Kön:  Män <br />Timmar:  19,084,000","År:  2022 <br />Kön:  Män <br />Timmar:  19,632,000","År:  2023 <br />Kön:  Män <br />Timmar:  19,929,000"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(100,182,238,1)","dash":"solid"},"hoveron":"points","name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":98.630136986301409},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,19.600000000000001],"tickmode":"array","ticktext":["2005","2023"],"tickvals":[1,19],"categoryorder":"array","categoryarray":["2005","2023"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[9000000,31000000],"tickmode":"array","ticktext":["20,000,000"],"tickvals":[20000000],"categoryorder":"array","categoryarray":["20,000,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Timmar","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c6cac3802":{"x":{},"y":{},"colour":{},"text":{},"type":"scatter"}},"cur_data":"297c6cac3802","visdat":{"297c6cac3802":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-8" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="frånvarotimmar-från-arbete-utifrån-kön-och-anledning"
+class="section level3">
+<h3>Frånvarotimmar från arbete utifrån kön och anledning</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-3a1bf95d57597fa041f0" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-3a1bf95d57597fa041f0">{"x":{"data":[{"orientation":"v","width":[0.45000000000000018,0.44999999999999996,0.45000000000000018],"base":[0,0,0],"x":[1.7749999999999999,0.77499999999999991,2.7749999999999999],"y":[4191000,9686000,7513000],"text":["Anledning: Sjuk <br />Kön:  Kvinnor <br />Timmar:  4,191,000","Anledning: Semester <br />Kön:  Kvinnor <br />Timmar:  9,686,000","Anledning: Övrig frånvaro <br />Kön:  Kvinnor <br />Timmar:  7,513,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018],"base":[0,0,0],"x":[2.2250000000000001,1.2250000000000001,3.2250000000000001],"y":[3046000,10281000,6602000],"text":["Anledning: Sjuk <br />Kön:  Män <br />Timmar:  3,046,000","Anledning: Semester <br />Kön:  Män <br />Timmar:  10,281,000","Anledning: Övrig frånvaro <br />Kön:  Män <br />Timmar:  6,602,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":98.630136986301409},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,3.6000000000000001],"tickmode":"array","ticktext":["Semester","Sjuk","Övrig frånvaro"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["Semester","Sjuk","Övrig frånvaro"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-514050,10795050],"tickmode":"array","ticktext":["0","2,000,000","4,000,000","6,000,000","8,000,000","10,000,000"],"tickvals":[0,2000000,4000000,6000000.0000000009,8000000,10000000],"categoryorder":"array","categoryarray":["0","2,000,000","4,000,000","6,000,000","8,000,000","10,000,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Timmar","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c71a4f09":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c71a4f09","visdat":{"297c71a4f09":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="anställning-utifrån-sektor" class="section level1"
+data-orientation="columns" data-navmenu="Anställning">
+<h1>Anställning utifrån sektor</h1>
+<div id="section-9" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="fördelning-utifrån-sektor" class="section level3">
+<h3>Fördelning utifrån sektor</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2c5a0d5d9cb17e9712f1" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-2c5a0d5d9cb17e9712f1">{"x":{"data":[{"orientation":"v","width":0.89999999999999991,"base":0,"x":[1],"y":[1042095],"text":"Kommun <br />Antal:  1,042,095 <br />Andel:  19 %","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,255,154,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kommun","legendgroup":"Kommun","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.90000000000000013,"base":0,"x":[2],"y":[3731097],"text":"Näringslivet <br />Antal:  3,731,097 <br />Andel:  69 %","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Näringslivet","legendgroup":"Näringslivet","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.90000000000000036,"base":0,"x":[3],"y":[327169],"text":"Region <br />Antal:  327,169 <br />Andel:  6 %","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(148,197,140,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Region","legendgroup":"Region","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.90000000000000036,"base":0,"x":[4],"y":[324421],"text":"Staten <br />Antal:  324,421 <br />Andel:  6 %","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Staten","legendgroup":"Staten","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":92.254047322540515},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,4.5999999999999996],"tickmode":"array","ticktext":["Kommun","Näringslivet","Region","Staten"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["Kommun","Näringslivet","Region","Staten"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-186554.85000000001,3917651.8500000001],"tickmode":"array","ticktext":["0","500,000","1,000,000","1,500,000","2,000,000","2,500,000","3,000,000","3,500,000"],"tickvals":[0,500000,1000000.0000000001,1500000,2000000,2500000,3000000,3500000],"categoryorder":"array","categoryarray":["0","500,000","1,000,000","1,500,000","2,000,000","2,500,000","3,000,000","3,500,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal anställda","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Sektor","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c6ab16a35":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c6ab16a35","visdat":{"297c6ab16a35":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-10" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="fördelning-utifrån-sektor-och-kön" class="section level3">
+<h3>Fördelning utifrån sektor och kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-7a0c5c733788e55a2681" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-7a0c5c733788e55a2681">{"x":{"data":[{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999996],"base":[0,0,0,0],"x":[1.7749999999999999,3.7749999999999999,2.7749999999999999,0.77499999999999991],"y":[1472435,170363,250477,758069],"text":["Näringslivet <br />Antal:  1,472,435 <br />Andel:  27 %","Staten <br />Antal:  170,363 <br />Andel:  3 %","Region <br />Antal:  250,477 <br />Andel:  5 %","Kommun <br />Antal:  758,069 <br />Andel:  14 %"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.44999999999999973,0.45000000000000018,0.45000000000000018],"base":[0,0,0,0],"x":[2.2250000000000001,4.2249999999999996,3.2250000000000001,1.2250000000000001],"y":[2258661,154057,76691,284026],"text":["Näringslivet <br />Antal:  2,258,661 <br />Andel:  42 %","Staten <br />Antal:  154,057 <br />Andel:  3 %","Region <br />Antal:  76,691 <br />Andel:  1 %","Kommun <br />Antal:  284,026 <br />Andel:  5 %"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":92.254047322540515},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,4.5999999999999996],"tickmode":"array","ticktext":["Kommun","Näringslivet","Region","Staten"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["Kommun","Näringslivet","Region","Staten"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-112933.05,2371594.0499999998],"tickmode":"array","ticktext":["0","500,000","1,000,000","1,500,000","2,000,000"],"tickvals":[0,500000.00000000006,1000000,1500000,1999999.9999999998],"categoryorder":"array","categoryarray":["0","500,000","1,000,000","1,500,000","2,000,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal anställda","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c7a12654a":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c7a12654a","visdat":{"297c7a12654a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="anställning-utifrån-näringsgren" class="section level1"
+data-orientation="columns" data-navmenu="Anställning">
+<h1>Anställning utifrån näringsgren</h1>
+<div id="section-11" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="fördelning-totalt" class="section level3">
+<h3>Fördelning, totalt</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-f18a771eb1a3b0f71612" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-f18a771eb1a3b0f71612">{"x":{"data":[{"orientation":"v","width":[0.89999999999999947,0.90000000000000036,0.89999999999999858,0.90000000000000013,0.89999999999999858,0.89999999999999991,0.90000000000000036,0.89999999999999858,0.90000000000000036,0.90000000000000036,0.89999999999999858,0.90000000000000036,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[8,4,13,2,17,1,5,14,6,7,10,3,9,16,12,15,18,11,19],"y":[49149,11270,572240,34668,32098,356313,638523,251187,254438,244111,117486,97809,351858,334616,362833,584522,1033748,130813,123287],"text":["Jordbruk, skogsbruk och fiske <br />Antal:  49,149 <br />Andel:  1 %","Gruvor och mineralutvinning <br />Antal:  11,270 <br />Andel:  0 %","Tillverkning <br />Antal:  572,240 <br />Andel:  10 %","El, gas och värme <br />Antal:  34,668 <br />Andel:  1 %","Vatten, rening och avfall <br />Antal:  32,098 <br />Andel:  1 %","Bygg <br />Antal:  356,313 <br />Andel:  6 %","Handel och fordonsservice <br />Antal:  638,523 <br />Andel:  11 %","Transport och magasinering <br />Antal:  251,187 <br />Andel:  5 %","Hotell och restauranger <br />Antal:  254,438 <br />Andel:  5 %","Information och kommunikation <br />Antal:  244,111 <br />Andel:  4 %","Kredit och försäkring <br />Antal:  117,486 <br />Andel:  2 %","Fastighet <br />Antal:  97,809 <br />Andel:  2 %","Juridik, ekonomi, vetenskap och teknik <br />Antal:  351,858 <br />Andel:  6 %","Uthyrning, fastighetsservice och resetjänster <br />Antal:  334,616 <br />Andel:  6 %","Offentlig förvaltning <br />Antal:  362,833 <br />Andel:  7 %","Utbildning <br />Antal:  584,522 <br />Andel:  10 %","Vård och omsorg <br />Antal:  1,033,748 <br />Andel:  19 %","Kultur, nöje och fritid <br />Antal:  130,813 <br />Andel:  2 %","Övrig service <br />Antal:  123,287 <br />Andel:  2 %"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":159.30644271756117,"l":92.254047322540515},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,19.600000000000001],"tickmode":"array","ticktext":["Bygg","El, gas och värme","Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vatten, rening och avfall","Vård och omsorg","Övrig service"],"tickvals":[1,2,3,4,5,6.0000000000000009,7,8,9,10,11,12,13,14.000000000000002,15,16,17,18,19],"categoryorder":"array","categoryarray":["Bygg","El, gas och värme","Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vatten, rening och avfall","Vård och omsorg","Övrig service"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-70,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-51687.400000000001,1085435.3999999999],"tickmode":"array","ticktext":["0","200,000","400,000","600,000","800,000","1,000,000"],"tickvals":[0,200000,400000.00000000006,600000,800000,999999.99999999988],"categoryorder":"array","categoryarray":["0","200,000","400,000","600,000","800,000","1,000,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal anställda","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c6ac931c2":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c6ac931c2","visdat":{"297c6ac931c2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="fördelning-kvinnor" class="section level3">
+<h3>Fördelning, kvinnor</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-8470022f20f75a51dd22" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-8470022f20f75a51dd22">{"x":{"data":[{"orientation":"v","width":[0.90000000000000036,0.90000000000000013,0.89999999999999858,0.90000000000000036,0.89999999999999858,0.90000000000000036,0.90000000000000036,0.89999999999999947,0.89999999999999991,0.90000000000000036,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[6,2,11,3,12,4,5,8,1,7,14,10,13,15,9,16],"y":[15556,2967,151243,297823,56020,134539,75646,57783,41936,156728,146434,214276,412275,763840,72081,74512],"text":["Jordbruk, skogsbruk och fiske <br />Antal:  15,556 <br />Andel:  1 %","Gruvor och mineralutvinning <br />Antal:  2,967 <br />Andel:  0 %","Tillverkning <br />Antal:  151,243 <br />Andel:  6 %","Handel och fordonsservice <br />Antal:  297,823 <br />Andel:  11 %","Transport och magasinering <br />Antal:  56,020 <br />Andel:  2 %","Hotell och restauranger <br />Antal:  134,539 <br />Andel:  5 %","Information och kommunikation <br />Antal:  75,646 <br />Andel:  3 %","Kredit och försäkring <br />Antal:  57,783 <br />Andel:  2 %","Fastighet <br />Antal:  41,936 <br />Andel:  2 %","Juridik, ekonomi, vetenskap och teknik <br />Antal:  156,728 <br />Andel:  6 %","Uthyrning, fastighetsservice och resetjänster <br />Antal:  146,434 <br />Andel:  5 %","Offentlig förvaltning <br />Antal:  214,276 <br />Andel:  8 %","Utbildning <br />Antal:  412,275 <br />Andel:  15 %","Vård och omsorg <br />Antal:  763,840 <br />Andel:  29 %","Kultur, nöje och fritid <br />Antal:  72,081 <br />Andel:  3 %","Övrig service <br />Antal:  74,512 <br />Andel:  3 %"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":159.30644271756117,"l":79.501867995018699},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,16.600000000000001],"tickmode":"array","ticktext":["Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vård och omsorg","Övrig service"],"tickvals":[1,2,3.0000000000000004,4,5,6,7,8,9,10,11,12,13,14,15,16],"categoryorder":"array","categoryarray":["Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vård och omsorg","Övrig service"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-70,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-38192,802032],"tickmode":"array","ticktext":["0","200,000","400,000","600,000","800,000"],"tickvals":[0,199999.99999999997,400000,600000,800000],"categoryorder":"array","categoryarray":["0","200,000","400,000","600,000","800,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal anställda","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative","annotations":[{"x":0,"y":1,"text":"Könsfördelningsstatistik saknas inom Bygg, El, gas och värme och Vatten, rening och avfall.","showarrow":false,"xref":"paper","yref":"paper","xanchor":"left","yanchor":"top","font":{"size":12,"color":"black"}},{"x":0,"y":1,"text":"Könsfördelningsstatistik saknas inom Bygg, El, gas och värme och Vatten, rening och avfall.","showarrow":false,"xref":"paper","yref":"paper","xanchor":"left","yanchor":"top","font":{"size":12,"color":"black"}}]},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c4f1c3b47":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c4f1c3b47","visdat":{"297c4f1c3b47":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="fördelning-män" class="section level3">
+<h3>Fördelning, män</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-227180f3dfe0f0225e51" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-227180f3dfe0f0225e51">{"x":{"data":[{"orientation":"v","width":[0.90000000000000036,0.90000000000000013,0.89999999999999858,0.90000000000000036,0.89999999999999858,0.90000000000000036,0.90000000000000036,0.89999999999999947,0.89999999999999991,0.90000000000000036,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[6,2,11,3,12,4,5,8,1,7,14,10,13,15,9,16],"y":[33592,8303,420996,340700,195167,119898,168465,59703,55872,195130,188182,148557,172247,269907,58731,48775],"text":["Jordbruk, skogsbruk och fiske <br />Antal:  33,592 <br />Andel:  1 %","Gruvor och mineralutvinning <br />Antal:  8,303 <br />Andel:  0 %","Tillverkning <br />Antal:  420,996 <br />Andel:  17 %","Handel och fordonsservice <br />Antal:  340,700 <br />Andel:  14 %","Transport och magasinering <br />Antal:  195,167 <br />Andel:  8 %","Hotell och restauranger <br />Antal:  119,898 <br />Andel:  5 %","Information och kommunikation <br />Antal:  168,465 <br />Andel:  7 %","Kredit och försäkring <br />Antal:  59,703 <br />Andel:  2 %","Fastighet <br />Antal:  55,872 <br />Andel:  2 %","Juridik, ekonomi, vetenskap och teknik <br />Antal:  195,130 <br />Andel:  8 %","Uthyrning, fastighetsservice och resetjänster <br />Antal:  188,182 <br />Andel:  8 %","Offentlig förvaltning <br />Antal:  148,557 <br />Andel:  6 %","Utbildning <br />Antal:  172,247 <br />Andel:  7 %","Vård och omsorg <br />Antal:  269,907 <br />Andel:  11 %","Kultur, nöje och fritid <br />Antal:  58,731 <br />Andel:  2 %","Övrig service <br />Antal:  48,775 <br />Andel:  2 %"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":159.30644271756117,"l":79.501867995018699},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,16.600000000000001],"tickmode":"array","ticktext":["Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vård och omsorg","Övrig service"],"tickvals":[1,2,3.0000000000000004,4,5,6,7,8,9,10,11,12,13,14,15,16],"categoryorder":"array","categoryarray":["Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vård och omsorg","Övrig service"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-70,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-21049.800000000003,442045.79999999999],"tickmode":"array","ticktext":["0","100,000","200,000","300,000","400,000"],"tickvals":[0,99999.999999999985,200000,300000,400000],"categoryorder":"array","categoryarray":["0","100,000","200,000","300,000","400,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Antal anställda","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative","annotations":[{"x":0,"y":1,"text":"Könsfördelningsstatistik saknas inom Bygg, El, gas och värme och Vatten, rening och avfall.","showarrow":false,"xref":"paper","yref":"paper","xanchor":"left","yanchor":"top","font":{"size":12,"color":"black"}},{"x":0,"y":1,"text":"Könsfördelningsstatistik saknas inom Bygg, El, gas och värme och Vatten, rening och avfall.","showarrow":false,"xref":"paper","yref":"paper","xanchor":"left","yanchor":"top","font":{"size":12,"color":"black"}}]},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c2f171c3b":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c2f171c3b","visdat":{"297c2f171c3b":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-12" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="andel-kvinnor-av-totalt-antal-anställda"
+class="section level3">
+<h3>Andel kvinnor av totalt antal anställda</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-e6c19e0e07d5f3e8c9cb" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-e6c19e0e07d5f3e8c9cb">{"x":{"data":[{"orientation":"v","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036,0.90000000000000036,0.90000000000000036,0.90000000000000036,0.89999999999999947,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],"y":[0.42875838377228859,0.26326530612244897,0.46642485861903171,0.52877136579978545,0.30988361851780544,0.31651338813379998,0.44542969038646274,0.49182881364588121,0.55102742867626819,0.5905637028605446,0.26430040594926246,0.22302109583696608,0.70531990241599118,0.43761804575991586,0.73890419996382095,0.60437840161574208],"text":["Fastighet <br />Andel kvinnor:  43 %","Gruvor och mineralutvinning <br />Andel kvinnor:  26 %","Handel och fordonsservice <br />Andel kvinnor:  47 %","Hotell och restauranger <br />Andel kvinnor:  53 %","Information och kommunikation <br />Andel kvinnor:  31 %","Jordbruk, skogsbruk och fiske <br />Andel kvinnor:  32 %","Juridik, ekonomi, vetenskap och teknik <br />Andel kvinnor:  45 %","Kredit och försäkring <br />Andel kvinnor:  49 %","Kultur, nöje och fritid <br />Andel kvinnor:  55 %","Offentlig förvaltning <br />Andel kvinnor:  59 %","Tillverkning <br />Andel kvinnor:  26 %","Transport och magasinering <br />Andel kvinnor:  22 %","Utbildning <br />Andel kvinnor:  71 %","Uthyrning, fastighetsservice och resetjänster <br />Andel kvinnor:  44 %","Vård och omsorg <br />Andel kvinnor:  74 %","Övrig service <br />Andel kvinnor:  60 %"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":159.30644271756117,"l":53.99750933997511},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,16.600000000000001],"tickmode":"array","ticktext":["Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vård och omsorg","Övrig service"],"tickvals":[1,2,3.0000000000000004,4,5,6,7,8,9,10,11,12,13,14,15,16],"categoryorder":"array","categoryarray":["Fastighet","Gruvor och mineralutvinning","Handel och fordonsservice","Hotell och restauranger","Information och kommunikation","Jordbruk, skogsbruk och fiske","Juridik, ekonomi, vetenskap och teknik","Kredit och försäkring","Kultur, nöje och fritid","Offentlig förvaltning","Tillverkning","Transport och magasinering","Utbildning","Uthyrning, fastighetsservice och resetjänster","Vård och omsorg","Övrig service"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-70,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["50%"],"tickvals":[0.5],"categoryorder":"array","categoryarray":["50%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Andel kvinnor","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative","annotations":[{"x":0,"y":1,"text":"Könsfördelningsstatistik saknas inom Bygg, El, gas och värme och Vatten, rening och avfall.","showarrow":false,"xref":"paper","yref":"paper","xanchor":"left","yanchor":"top","font":{"size":12,"color":"black"}},{"x":0,"y":1,"text":"Könsfördelningsstatistik saknas inom Bygg, El, gas och värme och Vatten, rening och avfall.","showarrow":false,"xref":"paper","yref":"paper","xanchor":"left","yanchor":"top","font":{"size":12,"color":"black"}}]},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c67b0282c":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c67b0282c","visdat":{"297c67b0282c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="löner-utifrån-sektor" class="section level1"
+data-orientation="columns" data-navmenu="Löner">
+<h1>Löner utifrån sektor</h1>
+<div id="section-13" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="genomsnittslöner-utifrån-sektor" class="section level3">
+<h3>Genomsnittslöner utifrån sektor</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-54d515047bb3d3bc8a26" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-54d515047bb3d3bc8a26">{"x":{"data":[{"orientation":"v","width":[0.90000000000000013,0.90000000000000036,0.89999999999999991,0.90000000000000036,0.90000000000000036],"base":[0,0,0,0,0],"x":[2,5,1,4,3],"y":[36600,41500,33700,41300,39000],"text":["Offentlig <br />Genomsnittslön:  36,600","Statlig <br />Genomsnittslön:  41,500","Kommunal <br />Genomsnittslön:  33,700","Region <br />Genomsnittslön:  41,300","Privat <br />Genomsnittslön:  39,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Kommunal","Offentlig","Privat","Region","Statlig"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Kommunal","Offentlig","Privat","Region","Statlig"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2075,43575],"tickmode":"array","ticktext":["0","10,000","20,000","30,000","40,000"],"tickvals":[0,10000,20000,30000,40000],"categoryorder":"array","categoryarray":["0","10,000","20,000","30,000","40,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c55ec6d00":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"297c55ec6d00","visdat":{"297c55ec6d00":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-14" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="genomsnittslöner-utifrån-sektor-och-kön"
+class="section level3">
+<h3>Genomsnittslöner utifrån sektor och kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-7f5510ddf0613dbdbc6f" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-7f5510ddf0613dbdbc6f">{"x":{"data":[{"orientation":"v","width":[0.45000000000000018,0.44999999999999929,0.44999999999999996,0.45000000000000018,0.45000000000000018],"base":[0,0,0,0,0],"x":[1.7749999999999999,4.7750000000000004,0.77499999999999991,3.7749999999999999,2.7749999999999999],"y":[35700,40400,33600,39500,36600],"text":["Kvinnor <br />Sektor:  Offentlig <br />Genomsnittslön:  35,700","Kvinnor <br />Sektor:  Statlig <br />Genomsnittslön:  40,400","Kvinnor <br />Sektor:  Kommunal <br />Genomsnittslön:  33,600","Kvinnor <br />Sektor:  Region <br />Genomsnittslön:  39,500","Kvinnor <br />Sektor:  Privat <br />Genomsnittslön:  36,600"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.44999999999999929,0.45000000000000018,0.44999999999999973,0.45000000000000018],"base":[0,0,0,0,0],"x":[2.2250000000000001,5.2249999999999996,1.2250000000000001,4.2249999999999996,3.2250000000000001],"y":[38900,42800,34100,47700,40500],"text":["Män <br />Sektor:  Offentlig <br />Genomsnittslön:  38,900","Män <br />Sektor:  Statlig <br />Genomsnittslön:  42,800","Män <br />Sektor:  Kommunal <br />Genomsnittslön:  34,100","Män <br />Sektor:  Region <br />Genomsnittslön:  47,700","Män <br />Sektor:  Privat <br />Genomsnittslön:  40,500"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Kommunal","Offentlig","Privat","Region","Statlig"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Kommunal","Offentlig","Privat","Region","Statlig"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2385,50085],"tickmode":"array","ticktext":["0","10,000","20,000","30,000","40,000","50,000"],"tickvals":[0,10000,20000,30000.000000000004,40000,50000],"categoryorder":"array","categoryarray":["0","10,000","20,000","30,000","40,000","50,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c1b291dd7":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c1b291dd7","visdat":{"297c1b291dd7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="löner-utifrån-utbildningsnivå" class="section level1"
+data-orientation="columns" data-navmenu="Löner">
+<h1>Löner utifrån utbildningsnivå</h1>
+<div id="section-15" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="genomsnittslöner-utifrån-utbildningsnivå"
+class="section level3">
+<h3>Genomsnittslöner utifrån utbildningsnivå</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-285b5f902e67a6e60936" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-285b5f902e67a6e60936">{"x":{"data":[{"orientation":"v","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036,0.90000000000000036,0.90000000000000036,0.90000000000000036],"base":[0,0,0,0,0,0,0],"x":[1,2,3,4,5,6,7],"y":[27300,31300,34100,33600,38700,46000,59000],"text":["Förgymnasial -9 år <br />Genomsnittslön:  27,300","Förgymnasial 9+ år <br />Genomsnittslön:  31,300","Gymnasial -3 år <br />Genomsnittslön:  34,100","Gymnasial 3 år <br />Genomsnittslön:  33,600","Eftergymnasial -3 år <br />Genomsnittslön:  38,700","Eftergymnasial 3+ år <br />Genomsnittslön:  46,000","Forskarutbildning <br />Genomsnittslön:  59,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":78.174902907378694,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,7.5999999999999996],"tickmode":"array","ticktext":["Förgymnasial -9 år","Förgymnasial 9+ år","Gymnasial -3 år","Gymnasial 3 år","Eftergymnasial -3 år","Eftergymnasial 3+ år","Forskarutbildning"],"tickvals":[1,2,3,4.0000000000000009,5,6,7],"categoryorder":"array","categoryarray":["Förgymnasial -9 år","Förgymnasial 9+ år","Gymnasial -3 år","Gymnasial 3 år","Eftergymnasial -3 år","Eftergymnasial 3+ år","Forskarutbildning"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-70,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2950,61950],"tickmode":"array","ticktext":["0","20,000","40,000","60,000"],"tickvals":[0,20000,40000,60000],"categoryorder":"array","categoryarray":["0","20,000","40,000","60,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c79567b62":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"297c79567b62","visdat":{"297c79567b62":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-16" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="genomsnittslöner-utifrån-utbildningsnivå-och-kön"
+class="section level3">
+<h3>Genomsnittslöner utifrån utbildningsnivå och kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-99a14c60cbe785788674" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-99a14c60cbe785788674">{"x":{"data":[{"orientation":"v","width":[0.44999999999999996,0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999929,0.44999999999999929,0.44999999999999929],"base":[0,0,0,0,0,0,0],"x":[0.77500000000000002,1.7749999999999999,2.7749999999999999,3.7749999999999999,4.7750000000000004,5.7750000000000004,6.7750000000000004],"y":[25900,28500,31400,31100,35700,42700,56400],"text":["Kvinnor <br />Utbildningsnivå:  Förgymnasial -9 år <br />Genomsnittslön:  25,900","Kvinnor <br />Utbildningsnivå:  Förgymnasial 9+ år <br />Genomsnittslön:  28,500","Kvinnor <br />Utbildningsnivå:  Gymnasial -3 år <br />Genomsnittslön:  31,400","Kvinnor <br />Utbildningsnivå:  Gymnasial 3 år <br />Genomsnittslön:  31,100","Kvinnor <br />Utbildningsnivå:  Eftergymnasial -3 år <br />Genomsnittslön:  35,700","Kvinnor <br />Utbildningsnivå:  Eftergymnasial 3+ år <br />Genomsnittslön:  42,700","Kvinnor <br />Utbildningsnivå:  Forskarutbildning <br />Genomsnittslön:  56,400"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999973,0.44999999999999929,0.44999999999999929,0.44999999999999929],"base":[0,0,0,0,0,0,0],"x":[1.2250000000000001,2.2250000000000001,3.2250000000000001,4.2249999999999996,5.2249999999999996,6.2249999999999996,7.2249999999999996],"y":[28500,33100,36100,35600,41800,51100,61100],"text":["Män <br />Utbildningsnivå:  Förgymnasial -9 år <br />Genomsnittslön:  28,500","Män <br />Utbildningsnivå:  Förgymnasial 9+ år <br />Genomsnittslön:  33,100","Män <br />Utbildningsnivå:  Gymnasial -3 år <br />Genomsnittslön:  36,100","Män <br />Utbildningsnivå:  Gymnasial 3 år <br />Genomsnittslön:  35,600","Män <br />Utbildningsnivå:  Eftergymnasial -3 år <br />Genomsnittslön:  41,800","Män <br />Utbildningsnivå:  Eftergymnasial 3+ år <br />Genomsnittslön:  51,100","Män <br />Utbildningsnivå:  Forskarutbildning <br />Genomsnittslön:  61,100"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":78.174902907378694,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,7.5999999999999996],"tickmode":"array","ticktext":["Förgymnasial -9 år","Förgymnasial 9+ år","Gymnasial -3 år","Gymnasial 3 år","Eftergymnasial -3 år","Eftergymnasial 3+ år","Forskarutbildning"],"tickvals":[1,2,3,4.0000000000000009,5,6,7],"categoryorder":"array","categoryarray":["Förgymnasial -9 år","Förgymnasial 9+ år","Gymnasial -3 år","Gymnasial 3 år","Eftergymnasial -3 år","Eftergymnasial 3+ år","Forskarutbildning"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-70,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3055,64155],"tickmode":"array","ticktext":["0","20,000","40,000","60,000"],"tickvals":[0,20000,40000,60000],"categoryorder":"array","categoryarray":["0","20,000","40,000","60,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c12c63526":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c12c63526","visdat":{"297c12c63526":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="löner-utifrån-ålder" class="section level1"
+data-orientation="columns" data-navmenu="Löner">
+<h1>Löner utifrån ålder</h1>
+<div id="section-17" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="genomsnittslöner-utifrån-ålder" class="section level3">
+<h3>Genomsnittslöner utifrån ålder</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-74cf3f9abb076abee53e" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-74cf3f9abb076abee53e">{"x":{"data":[{"orientation":"v","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036,0.90000000000000036],"base":[0,0,0,0,0],"x":[1,2,3,4,5],"y":[28700,36100,41400,44700,43000],"text":["18-24 <br />Genomsnittslön:  28,700","25-34 <br />Genomsnittslön:  36,100","35-44 <br />Genomsnittslön:  41,400","45-54 <br />Genomsnittslön:  44,700","55-64 <br />Genomsnittslön:  43,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["18-24","25-34","35-44","45-54","55-64"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["18-24","25-34","35-44","45-54","55-64"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2235,46935],"tickmode":"array","ticktext":["0","10,000","20,000","30,000","40,000"],"tickvals":[0,10000,20000,30000,40000],"categoryorder":"array","categoryarray":["0","10,000","20,000","30,000","40,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c6cb161fc":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"297c6cb161fc","visdat":{"297c6cb161fc":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-18" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="genomsnittslöner-utifrån-ålder-och-kön" class="section level3">
+<h3>Genomsnittslöner utifrån ålder och kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-ba4b983197b01af72c01" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-ba4b983197b01af72c01">{"x":{"data":[{"orientation":"v","width":[0.44999999999999996,0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999929],"base":[0,0,0,0,0],"x":[0.77500000000000002,1.7749999999999999,2.7749999999999999,3.7749999999999999,4.7750000000000004],"y":[28000,34800,39100,41400,40000],"text":["Kvinnor <br />Ålderskategori:  18-24 <br />Genomsnittslön:  28,000","Kvinnor <br />Ålderskategori:  25-34 <br />Genomsnittslön:  34,800","Kvinnor <br />Ålderskategori:  35-44 <br />Genomsnittslön:  39,100","Kvinnor <br />Ålderskategori:  45-54 <br />Genomsnittslön:  41,400","Kvinnor <br />Ålderskategori:  55-64 <br />Genomsnittslön:  40,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999973,0.44999999999999929],"base":[0,0,0,0,0],"x":[1.2250000000000001,2.2250000000000001,3.2250000000000001,4.2249999999999996,5.2249999999999996],"y":[29400,37200,43500,48000,46000],"text":["Män <br />Ålderskategori:  18-24 <br />Genomsnittslön:  29,400","Män <br />Ålderskategori:  25-34 <br />Genomsnittslön:  37,200","Män <br />Ålderskategori:  35-44 <br />Genomsnittslön:  43,500","Män <br />Ålderskategori:  45-54 <br />Genomsnittslön:  48,000","Män <br />Ålderskategori:  55-64 <br />Genomsnittslön:  46,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["18-24","25-34","35-44","45-54","55-64"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["18-24","25-34","35-44","45-54","55-64"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2400,50400],"tickmode":"array","ticktext":["0","10,000","20,000","30,000","40,000","50,000"],"tickvals":[0,10000,20000,30000,40000,50000],"categoryorder":"array","categoryarray":["0","10,000","20,000","30,000","40,000","50,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c1b44892":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c1b44892","visdat":{"297c1b44892":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="lönespridning" class="section level1"
+data-orientation="columns" data-navmenu="Löner">
+<h1>Lönespridning</h1>
+<div id="section-19" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="lönespridning-utifrån-kön" class="section level3">
+<h3>Lönespridning utifrån kön</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-ff3c7a9d296faa54c497" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-ff3c7a9d296faa54c497">{"x":{"data":[{"orientation":"v","width":[0.45000000000000018,0.44999999999999996,0.45000000000000018,0.45000000000000018,0.44999999999999929],"base":[0,0,0,0,0],"x":[2.7749999999999999,0.77499999999999991,1.7749999999999999,3.7749999999999999,4.7750000000000004],"y":[34300,25600,29000,42200,52700],"text":["Kvinnor <br />Genomsnittslön:  34,300","Kvinnor <br />Genomsnittslön:  25,600","Kvinnor <br />Genomsnittslön:  29,000","Kvinnor <br />Genomsnittslön:  42,200","Kvinnor <br />Genomsnittslön:  52,700"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kvinnor","legendgroup":"Kvinnor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999973,0.44999999999999929],"base":[0,0,0,0,0],"x":[3.2250000000000001,1.2250000000000001,2.2250000000000001,4.2249999999999996,5.2249999999999996],"y":[37000,26800,30800,47000,61900],"text":["Män <br />Genomsnittslön:  37,000","Män <br />Genomsnittslön:  26,800","Män <br />Genomsnittslön:  30,800","Män <br />Genomsnittslön:  47,000","Män <br />Genomsnittslön:  61,900"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Män","legendgroup":"Män","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["10 percentilen","25 percentilen","Median","75 percentilen","90 percentilen"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["10 percentilen","25 percentilen","Median","75 percentilen","90 percentilen"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3095,64995],"tickmode":"array","ticktext":["0","20,000","40,000","60,000"],"tickvals":[0,20000,40000,60000],"categoryorder":"array","categoryarray":["0","20,000","40,000","60,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kön","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c644d77e7":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c644d77e7","visdat":{"297c644d77e7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="section-20" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills"></h2>
+<div id="lönespridning-utifrån-sektor" class="section level3">
+<h3>Lönespridning utifrån sektor</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2d848a23d2b403478f88" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-2d848a23d2b403478f88">{"x":{"data":[{"orientation":"v","width":[0.18000000000000016,0.17999999999999972,0.17999999999999994,0.17999999999999972,0.17999999999999972],"base":[0,0,0,0,0],"x":[1.6399999999999999,4.6399999999999997,0.6399999999999999,3.6399999999999997,2.6399999999999997],"y":[26300,29300,25400,28000,26000],"text":["10 percentilen <br />Genomsnittslön:  26,300","10 percentilen <br />Genomsnittslön:  29,300","10 percentilen <br />Genomsnittslön:  25,400","10 percentilen <br />Genomsnittslön:  28,000","10 percentilen <br />Genomsnittslön:  26,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,177,177,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"10 percentilen","legendgroup":"10 percentilen","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.18000000000000016,0.17999999999999972,0.17999999999999994,0.17999999999999972,0.17999999999999972],"base":[0,0,0,0,0],"x":[1.8199999999999998,4.8200000000000003,0.81999999999999995,3.8199999999999998,2.8199999999999998],"y":[30000,33000,28800,31700,29900],"text":["25 percentilen <br />Genomsnittslön:  30,000","25 percentilen <br />Genomsnittslön:  33,000","25 percentilen <br />Genomsnittslön:  28,800","25 percentilen <br />Genomsnittslön:  31,700","25 percentilen <br />Genomsnittslön:  29,900"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(100,182,238,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"25 percentilen","legendgroup":"25 percentilen","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.17999999999999994,0.17999999999999972,0.18000000000000005,0.17999999999999972,0.17999999999999972],"base":[0,0,0,0,0],"x":[2,5,1,4,3],"y":[35000,40000,33300,38100,36000],"text":["Median <br />Genomsnittslön:  35,000","Median <br />Genomsnittslön:  40,000","Median <br />Genomsnittslön:  33,300","Median <br />Genomsnittslön:  38,100","Median <br />Genomsnittslön:  36,000"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(148,197,140,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Median","legendgroup":"Median","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.17999999999999972,0.17999999999999972,0.18000000000000016,0.17999999999999972,0.17999999999999972],"base":[0,0,0,0,0],"x":[2.1800000000000002,5.1799999999999997,1.1799999999999999,4.1799999999999997,3.1800000000000002],"y":[42400,49000,39100,47100,45700],"text":["75 percentilen <br />Genomsnittslön:  42,400","75 percentilen <br />Genomsnittslön:  49,000","75 percentilen <br />Genomsnittslön:  39,100","75 percentilen <br />Genomsnittslön:  47,100","75 percentilen <br />Genomsnittslön:  45,700"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,255,154,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"75 percentilen","legendgroup":"75 percentilen","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.17999999999999972,0.17999999999999972,0.18000000000000016,0.17999999999999972,0.17999999999999972],"base":[0,0,0,0,0],"x":[2.3600000000000003,5.3600000000000003,1.3600000000000001,4.3600000000000003,3.3600000000000003],"y":[51400,59000,45700,64200,60100],"text":["90 percentilen <br />Genomsnittslön:  51,400","90 percentilen <br />Genomsnittslön:  59,000","90 percentilen <br />Genomsnittslön:  45,700","90 percentilen <br />Genomsnittslön:  64,200","90 percentilen <br />Genomsnittslön:  60,100"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,207,241,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"90 percentilen","legendgroup":"90 percentilen","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.148302561048247,"r":7.3059360730593621,"b":28.741494756980178,"l":73.125778331257806},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(235,104,100,1)","font":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Kommunal","Offentlig","Privat","Region","Statlig"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Kommunal","Offentlig","Privat","Region","Statlig"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":15.940224159402248},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.99626400996264053,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3210,67410],"tickmode":"array","ticktext":["0","20,000","40,000","60,000"],"tickvals":[0,20000,40000,60000],"categoryorder":"array","categoryarray":["0","20,000","40,000","60,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(255,255,255,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.9962640099626402,"showgrid":true,"gridcolor":"rgba(181,30,23,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Genomsnittslön","font":{"color":"rgba(255,255,255,1)","family":"sans","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":12.7521793275218},"title":{"text":"Kategori","font":{"color":"rgba(0,0,0,1)","family":"sans","size":15.940224159402248}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"297c71602fd2":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"297c71602fd2","visdat":{"297c71602fd2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed table-sm');
+
+  // initialize mathjax
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  FlexDashboard.init({
+    fillPage: true,
+    orientation: "rows",
+    storyboard: false,
+    defaultFigWidth: 576,
+    defaultFigHeight: 460,
+    defaultFigWidthMobile: 360,
+    defaultFigHeightMobile: 460,
+    resize_reload: true
+  });
+  var navbar = $(".navbar").first();
+  var body = $("body").first();
+  var sidebar = $(".section.sidebar").first();
+  function addNavbarPadding() {
+    var navHeight = navbar.outerHeight();
+    body.css("padding-top", (navHeight + 8) + "px");
+    sidebar.css("top", navHeight + "px");
+    var resizeEvent = window.document.createEvent("UIEvents");
+    resizeEvent.initUIEvent("resize", true, false, window, 0);
+    window.dispatchEvent(resizeEvent);
+  }
+  if (!window.Shiny) setTimeout(addNavbarPadding, 100);
+  $(document).on("shiny:idle", function() {
+    setTimeout(addNavbarPadding, 50);
+  });
+});
+</script>
+
+</body>
+</html>
