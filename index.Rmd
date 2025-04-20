@@ -44,14 +44,14 @@ library(sf)
 ## {data-height=375 .tabset .tabset-pills}
 
 ### Områden
-Dessa områden finns i nuläget rapporter att fördjupa sig inom:
+Dessa teman finns rapporter att fördjupa sig inom:
 <br>
 <br>
 - **Demokrati**: Partisympatier, valresultat och valdeltagande.
 <br>
 - **Arbete**: Arbetsmiljö, arbetstid, sysselsättningsgrad och frånvaro från arbete.
 <br>
-- **Livsstil**: Välbefinnande, hälsa, rökning/snusning och trygghet, .
+- **Livsstil**: Välbefinnande, hälsa, rökning/snusning och trygghet.
 <br>
 <br>
 För att komma åt en rapport, **klicka nedan!**
