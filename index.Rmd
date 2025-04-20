@@ -47,9 +47,9 @@ library(sf)
 Dessa teman finns rapporter att fördjupa sig inom:
 <br>
 <br>
-- **Demokrati**: Partisympatier, valresultat och valdeltagande.
+- **Demokrati**: Partisympatier, valresultat, valdeltagande och politiskt engagemang.
 <br>
-- **Arbete**: Arbetsmiljö, arbetstid, sysselsättningsgrad och frånvaro från arbete.
+- **Arbete**: Anställning, arbetstid, frånvaro från arbete och löner.
 <br>
 - **Livsstil**: Välbefinnande, hälsa, rökning/snusning och trygghet.
 <br>
